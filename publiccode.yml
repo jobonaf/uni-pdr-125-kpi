@@ -1,82 +1,30 @@
-# =============================================================================
-# publiccode.yml — Metadati software per la Pubblica Amministrazione
-# Standard: https://yml.publiccode.tools/
-# Versione schema: 0.3
-#
-# Questo file è obbligatorio per la pubblicazione su Developers Italia
-# (https://developers.italia.it) ai sensi dell'art. 69 del D.Lgs. 82/2005
-# (Codice dell'Amministrazione Digitale) e delle Linee Guida AGID
-# sull'acquisizione e riuso di software per le PA.
-# =============================================================================
-
 publiccodeYmlVersion: "0.3"
-
-# ── Identificazione ──────────────────────────────────────────────────────────
-name: "Strumento KPI UNI/PdR 125:2022"
-applicationSuite: ~
-url: "https://github.com/jobonaf/uni-pdr-125-kpi"   # URL repository da aggiornare
-landingURL: "https://github.com/jobonaf"
-
-# ── Versione e date ──────────────────────────────────────────────────────────
-softwareVersion: "0.1.0"
-releaseDate: "2025-03-27"
-
-# ── Logo ─────────────────────────────────────────────────────────────────────
-# logo: "assets/logo.svg"   # da aggiungere al repository
-
-# ── Piattaforme supportate ───────────────────────────────────────────────────
+name: Strumento KPI UNI/PdR 125:2022
+applicationSuite: null
+url: https://github.com/jobonaf/uni-pdr-125-kpi
+landingURL: https://github.com/jobonaf
+softwareVersion: 0.1.0
+releaseDate: 2025-03-27
 platforms:
   - web
-
-# ── Categoria ────────────────────────────────────────────────────────────────
-# Categorie definite da Developers Italia:
-# https://docs.italia.it/italia/developers-italia/publiccodeyml-docs/
 categories:
   - hr
   - compliance-management
   - data-analytics
-
-# ── Maturità del software ────────────────────────────────────────────────────
-developmentStatus: development   # concept | development | beta | stable | obsolete
-
-# ── Tipo di software ─────────────────────────────────────────────────────────
-softwareType: "standalone/web"
-
-# ── Riferimenti normativi e standard implementati ────────────────────────────
-# (campo libero nella descrizione — vedi sezione it/description)
-
-# ── Licenza ──────────────────────────────────────────────────────────────────
-# EUPL-1.2 è la licenza raccomandata da AGID per software PA (open source).
-# Lista licenze SPDX: https://spdx.org/licenses/
-legal:
-  license: "EUPL-1.2"
-  mainCopyrightOwner: "Giovanni Bonafè"
-  repoOwner: "Giovanni Bonafè"
-  authorsFile: "AUTHORS.md"
-
-# ── Manutenzione ─────────────────────────────────────────────────────────────
-maintenance:
-  type: "internal"   # internal | contract | community | none
-  contacts:
-    - name: "Giovanni Bonafè"
-      email: ""
-
-# ── Localizzazione ───────────────────────────────────────────────────────────
-localisation:
-  localisationReady: false   # il software non è ancora predisposto per i18n
-  availableLanguages:
-    - it
-
-# ── Descrizioni localizzate ──────────────────────────────────────────────────
+developmentStatus: development
+softwareType: standalone/web
+intendedAudience:
+  scope:
+    - employment
+    - government
+    - welfare
 description:
   it:
-    localisedName: "Strumento KPI UNI/PdR 125:2022 — Parità di Genere"
-    genericName: "Applicazione di gestione KPI"
-    shortDescription: >
-      Strumento web per la compilazione, il monitoraggio e la reportistica dei
-      KPI previsti dalla Prassi di Riferimento UNI/PdR 125:2022 sulla parità di
-      genere nelle organizzazioni pubbliche e private.
-
+    genericName: Applicazione di gestione KPI
+    localisedName: Strumento KPI UNI/PdR 125:2022 — Parità di Genere
+    shortDescription: Strumento web per il monitoraggio e la reportistica dei KPI
+      per UNI/PdR 125:2022 sulla parità di genere nelle organizzazioni pubbliche
+      e private.
     longDescription: >
       L'applicazione supporta le organizzazioni pubbliche e private nel percorso
       di certificazione della parità di genere ai sensi della UNI/PdR 125:2022,
@@ -123,68 +71,28 @@ description:
       - Agenda ONU 2030, Obiettivo 5 (uguaglianza di genere)
 
       - Strategia Nazionale sulla Parità di Genere 2021–2025
-
-    documentation: "https://github.com/jobonaf/uni-pdr-125-kpi/blob/main/README.md"
-    apiDocumentation: ~
-
+    documentation: https://github.com/jobonaf/uni-pdr-125-kpi/blob/main/README.md
+    apiDocumentation: null
     features:
-      - "Compilazione guidata KPI per fascia dimensionale (1–4)"
-      - "Verifica automatica KPI obbligatori per fascia (§5.2–5.7 norma)"
-      - "Score globale ponderato con soglia certificazione 60%"
-      - "Dashboard con radar chart e bar chart per area"
-      - "Confronto storico multi-annualità"
-      - "Report stampabile / PDF via browser"
-      - "Import/Export JSON (formato aperto)"
-      - "Benchmark ATECO da Appendice B UNI/PdR 125:2022"
-      - "Link a fonti ufficiali aggiornate (ISTAT, INPS, Consob, Eurostat)"
-
-    screenshots: []   # aggiungere path a screenshot nel repository
-    videos: []
-    awards: []
-
-# ── Dipendenze software ───────────────────────────────────────────────────────
-
-# ── Tecnologie usate ─────────────────────────────────────────────────────────
-# (non è un campo standard publiccode ma utile come nota)
-# - React 18 (componenti funzionali, hooks)
-# - Recharts 2.x (grafici: RadarChart, BarChart, LineChart)
-# - Babel standalone (transpilazione JSX lato client in sviluppo)
-# - Nessun backend, nessun database, nessun cookie, nessun dato personale
-
-# ── Interoperabilità ─────────────────────────────────────────────────────────
-intendedAudience:
-  scope:
-    - employment
-    - government
-    - welfare
-  countries:
+      - Compilazione guidata KPI per fascia dimensionale (1–4)
+      - Verifica automatica KPI obbligatori per fascia (§5.2–5.7 norma)
+      - Score globale ponderato con soglia certificazione 60%
+      - Dashboard con radar chart e bar chart per area
+      - Confronto storico multi-annualità
+      - Report stampabile / PDF via browser
+      - Import/Export JSON (formato aperto)
+      - Benchmark ATECO da Appendice B UNI/PdR 125:2022
+      - Link a fonti ufficiali aggiornate (ISTAT, INPS, Consob, Eurostat)
+legal:
+  license: EUPL-1.2
+  mainCopyrightOwner: Giovanni Bonafè
+  repoOwner: Giovanni Bonafè
+  authorsFile: AUTHORS.md
+maintenance:
+  type: internal
+  contacts:
+    - name: Giovanni Bonafè
+localisation:
+  localisationReady: false
+  availableLanguages:
     - it
-  unsupportedCountries: []
-
-# ── Conformità ───────────────────────────────────────────────────────────────
-# AGID — Linee Guida acquisizione e riuso software PA
-# https://docs.italia.it/italia/piano-triennale-ict/lg-acquisizione-e-riuso-software-per-pa-docs
-#
-# Stato conformità:
-#   ✅ Licenza aperta (EUPL-1.2)
-#   ✅ Codice sorgente disponibile
-#   ✅ Documentazione inline (JSDoc)
-#   ✅ Dati in formato aperto (JSON)
-#   ✅ Nessuna dipendenza proprietaria
-#   ✅ Nessun trattamento dati personali (dati in memoria locale)
-#   ⚠️  Accessibilità WCAG 2.1 AA: da completare (aria-label, navigazione tastiera)
-#   ⚠️  publiccode.yml: presente (questo file)
-#   ⚠️  Test automatizzati: da aggiungere
-#   ⚠️  Internazionalizzazione (i18n): non implementata
-
-# ── Accessibilità ────────────────────────────────────────────────────────────
-# Riferimento: Linee Guida AGID sull'accessibilità (WCAG 2.1 livello AA)
-# https://www.agid.gov.it/it/design-servizi/accessibilita
-#
-# Stato attuale:
-#   - Struttura HTML semantica: parziale (da migliorare con main/nav/section)
-#   - Attributi ARIA: da aggiungere su componenti interattivi
-#   - Navigazione da tastiera: parziale (button nativi OK, custom toggle da verificare)
-#   - Contrasti cromatici: da verificare con strumenti automatici (es. axe, Lighthouse)
-#   - Testo alternativo immagini: n/a (nessuna immagine raster)
-#   - SVG ORCID logo: aria-hidden="true" + aria-label sul link padre ✅
