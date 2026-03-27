@@ -50,7 +50,6 @@ Questo software è rilasciato sotto licenza EUPL-1.2 e può essere liberamente u
 ## Autori
 
 **Giovanni Bonafè**  
-ARPA FVG — Agenzia Regionale per la Protezione dell'Ambiente del Friuli Venezia Giulia  
 ORCID: [0000-0002-7815-8866](https://orcid.org/0000-0002-7815-8866)
 
 ## Contribuzioni
