@@ -64,5 +64,5 @@ Per segnalare bug, suggerimenti o domande:
 ---
 
 **Versione:** 0.1.0  
-**Ultimo aggiornamento:** 2025-03-27  
+**Ultimo aggiornamento:** 2026-03-27  
 **Status:** In sviluppo
