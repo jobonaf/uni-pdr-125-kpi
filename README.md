@@ -6,6 +6,15 @@ Applicazione per la compilazione, il monitoraggio e la reportistica dei KPI prev
 
 Lo strumento è sviluppato in conformità alle Linee Guida AGID sull'acquisizione e il riuso di software per le PA (art. 69 D.Lgs. 82/2005 — Codice dell'Amministrazione Digitale).
 
+## ⚠️ Limiti e avvertenze
+
+Questo strumento è fornito a scopo di **autovalutazione** e supporto alla preparazione per la certificazione UNI/PdR 125:2022.
+
+La certificazione ufficiale di parità di genere, che consente l’accesso agli incentivi previsti dalla legge (es. sgravi contributivi L. 162/2021), **può essere rilasciata esclusivamente da un Organismo di Certificazione accreditato da Accredia**, ai sensi del Regolamento CE 765/2008 e del Decreto Ministeriale 29 aprile 2022 (GU n. 152 del 01/07/2022).
+
+Il punteggio calcolato da questa applicazione non sostituisce in alcun modo il giudizio di un Organismo di Certificazione. Per l’elenco degli organismi abilitati, consultare il sito ufficiale del Dipartimento per le Pari Opportunità:  
+[https://certificazione.pariopportunita.gov.it/public/organismi-di-certificazione](https://certificazione.pariopportunita.gov.it/public/organismi-di-certificazione)
+
 ## Funzionalità principali
 
 - **Compilazione guidata dei KPI** per fascia dimensionale (1–4)
@@ -63,6 +72,6 @@ Per segnalare bug, suggerimenti o domande:
 
 ---
 
-**Versione:** 0.1.0  
-**Ultimo aggiornamento:** 2026-03-27  
+**Versione:** 0.2.0
+**Ultimo aggiornamento:** 2026-04-18
 **Status:** In sviluppo
