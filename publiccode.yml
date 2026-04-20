@@ -1,6 +1,6 @@
 publiccodeYmlVersion: "0.3"
 name: "Strumento KPI UNI/PdR 125:2022"
-applicationSuite: null
+applicationSuite: ""
 url: "https://github.com/jobonaf/uni-pdr-125-kpi"
 landingURL: "https://github.com/jobonaf"
 softwareVersion: "0.2.0"
