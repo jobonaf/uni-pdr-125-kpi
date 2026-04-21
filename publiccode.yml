@@ -1,125 +1,102 @@
 publiccodeYmlVersion: "0.5"
-
-name: "Strumento KPI UNI/PdR 125:2022"
+name: Strumento KPI UNI/PdR 125:2022
 applicationSuite: null
-
-url: "https://github.com/jobonaf/uni-pdr-125-kpi"
-landingURL: "https://github.com/jobonaf"
-
-softwareVersion: "0.2.0"
-releaseDate: "2026-04-18"
-
+url: https://github.com/jobonaf/uni-pdr-125-kpi
+landingURL: https://github.com/jobonaf
+softwareVersion: 0.2.0
+releaseDate: 2026-04-18
 platforms:
   - web
   - linux
   - windows
-
 categories:
   - hr
   - compliance-management
   - data-analytics
-
+roadmap: https://github.com/jobonaf/uni-pdr-125-kpi/issues
 developmentStatus: development
-
-softwareType: standalone
-
+softwareType: standalone/web
 intendedAudience:
   scope:
     - employment
     - government
     - welfare
-  administrativeLevel:
-    - national
-    - regional
-    - local
-  countries:
-    - it
-
 description:
   it:
-    genericName: "Applicazione di gestione KPI"
-    localisedName: "Strumento KPI UNI/PdR 125:2022 — Parità di Genere"
-    shortDescription: "Strumento web per il monitoraggio e la reportistica dei KPI per UNI/PdR 125:2022 sulla parità di genere nelle organizzazioni pubbliche e private."
-    longDescription: |
+    genericName: Applicazione di gestione KPI
+    localisedName: Strumento KPI UNI/PdR 125:2022 — Parità di Genere
+    shortDescription: Strumento web per il monitoraggio e la reportistica dei KPI
+      per UNI/PdR 125:2022 sulla parità di genere nelle organizzazioni pubbliche
+      e private.
+    longDescription: >
       L'applicazione supporta le organizzazioni pubbliche e private nel percorso
+
       di certificazione della parità di genere ai sensi della UNI/PdR 125:2022.
 
-      È installabile ed eseguibile su ambienti Linux e Windows, oltre che fruibile
+
+      È installabile ed eseguibile su ambienti Linux e Windows, oltre che
+      fruibile
+
       via web.
 
+
       Deploy pubblico disponibile su:
+
       https://uni-pdr-125-kpi.streamlit.app/
 
+
       L'applicazione non archivia dati, non trasmette informazioni a server
+
       remoti e non tratta dati personali.
+
 
       Funzionalità principali:
 
+
       - Compilazione guidata dei KPI nelle 6 aree della norma
+
       - Calcolo automatico dello score (soglia 60%)
+
       - Dashboard interattiva (radar, bar chart)
+
       - Confronto storico multi-annualità
+
       - Report esportabile (PDF)
+
       - Import/export JSON
-
-    documentation: "https://github.com/jobonaf/uni-pdr-125-kpi/blob/main/README.md"
+    documentation: https://github.com/jobonaf/uni-pdr-125-kpi/blob/main/README.md
     apiDocumentation: null
-
     features:
-      - "Compilazione guidata KPI per fascia dimensionale"
-      - "Verifica automatica KPI obbligatori"
-      - "Calcolo score certificazione (≥60%)"
-      - "Dashboard interattiva"
-      - "Confronto storico"
-      - "Report PDF"
-      - "Import/Export JSON"
-
+      - Compilazione guidata KPI per fascia dimensionale
+      - Verifica automatica KPI obbligatori
+      - Calcolo score certificazione (≥60%)
+      - Dashboard interattiva
+      - Confronto storico
+      - Report PDF
+      - Import/Export JSON
     screenshots:
-      - "https://raw.githubusercontent.com/jobonaf/uni-pdr-125-kpi/main/docs/screenshots/dashboard.png"
-      - "https://raw.githubusercontent.com/jobonaf/uni-pdr-125-kpi/main/docs/screenshots/compilazione.png"
-
-    inputTypes:
-      - "application/json"
-      - "text/plain"
-
-    outputTypes:
-      - "application/json"
-      - "application/pdf"
-      - "text/html"
-
+      - https://raw.githubusercontent.com/jobonaf/uni-pdr-125-kpi/main/docs/screenshots/dashboard.png
+      - https://raw.githubusercontent.com/jobonaf/uni-pdr-125-kpi/main/docs/screenshots/compilazione.png
 legal:
-  license: "EUPL-1.2"
-  mainCopyrightOwner: "Giovanni Bonafè"
-  repoOwner: "Giovanni Bonafè"
-  authorsFile: "AUTHORS.md"
-
+  license: EUPL-1.2
+  mainCopyrightOwner: Giovanni Bonafè
+  repoOwner: Giovanni Bonafè
+  authorsFile: AUTHORS.md
 maintenance:
   type: internal
   contacts:
-    - name: "Giovanni Bonafè"
-      email: "midable@gmail.com"
-
+    - name: Giovanni Bonafè
+      email: midable@gmail.com
 localisation:
   localisationReady: false
   availableLanguages:
     - it
-
-usedBy: []
-
-roadmap: "https://github.com/jobonaf/uni-pdr-125-kpi/issues"
-
-it:
+IT:
   countryExtensionVersion: "1.0"
-
   conforme:
     lineeGuidaDesign: false
     modelloInteroperabilita: false
     misureMinimeSicurezza: false
     gdpr: false
-
-  piattaforme:
-    web: true
-
   riuso:
     codiceIPA: null
-    modalità: "open source"
