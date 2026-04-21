@@ -1,23 +1,40 @@
-publiccodeYmlVersion: "0.3"
+publiccodeYmlVersion: "0.5"
+
 name: "Strumento KPI UNI/PdR 125:2022"
-applicationSuite: ""
+applicationSuite: null
+
 url: "https://github.com/jobonaf/uni-pdr-125-kpi"
 landingURL: "https://github.com/jobonaf"
+
 softwareVersion: "0.2.0"
 releaseDate: "2026-04-18"
+
 platforms:
   - web
+  - linux
+  - windows
+
 categories:
   - hr
   - compliance-management
   - data-analytics
+
 developmentStatus: development
-softwareType: "standalone/web"
+
+softwareType: standalone
+
 intendedAudience:
   scope:
     - employment
     - government
     - welfare
+  administrativeLevel:
+    - national
+    - regional
+    - local
+  countries:
+    - it
+
 description:
   it:
     genericName: "Applicazione di gestione KPI"
@@ -25,84 +42,84 @@ description:
     shortDescription: "Strumento web per il monitoraggio e la reportistica dei KPI per UNI/PdR 125:2022 sulla parità di genere nelle organizzazioni pubbliche e private."
     longDescription: |
       L'applicazione supporta le organizzazioni pubbliche e private nel percorso
-      di certificazione della parità di genere ai sensi della UNI/PdR 125:2022,
-      emanata da UNI su incarico del Dipartimento per le Pari Opportunità
-      nell'ambito del PNRR (Missione 5).
+      di certificazione della parità di genere ai sensi della UNI/PdR 125:2022.
 
-      Una versione dell'applicazione è disponibile online su 
+      È installabile ed eseguibile su ambienti Linux e Windows, oltre che fruibile
+      via web.
+
+      Deploy pubblico disponibile su:
       https://uni-pdr-125-kpi.streamlit.app/
+
+      L'applicazione non archivia dati, non trasmette informazioni a server
+      remoti e non tratta dati personali.
 
       Funzionalità principali:
 
-      - Anagrafica organizzazione con classificazione per fascia dimensionale
-        (Micro/Piccola/Media/Grande, tassonomia ISTAT) e settore ATECO.
+      - Compilazione guidata dei KPI nelle 6 aree della norma
+      - Calcolo automatico dello score (soglia 60%)
+      - Dashboard interattiva (radar, bar chart)
+      - Confronto storico multi-annualità
+      - Report esportabile (PDF)
+      - Import/export JSON
 
-      - Benchmark di settore estratti dall'Appendice B della norma con link
-        alle fonti ufficiali aggiornate (ISTAT, INPS, Consob, Eurostat).
-
-      - Compilazione guidata dei KPI suddivisi nelle 6 aree della norma
-        (Cultura e Strategia, Governance, Processi HR, Opportunità di Crescita,
-        Equità Remunerativa, Tutela Genitorialità), con descrizione estesa
-        per ogni indicatore e verifica automatica dei KPI "necessari" per fascia.
-
-      - Calcolo automatico dello score globale ponderato con verifica della
-        soglia di certificazione (60%) e dei requisiti obbligatori per fascia.
-
-      - Dashboard con radar chart, bar chart per area, distribuzione risposte
-        e tabella di riepilogo.
-
-      - Confronto storico multi-annualità con line chart e tabella comparativa.
-
-      - Report di valutazione stampabile / esportabile in PDF con elenco
-        dei gap e delle priorità di intervento.
-
-      - Import/Export dati in formato JSON aperto per la persistenza e la
-        condivisione tra sessioni e operatori.
-
-      Riferimenti normativi:
-
-      - UNI/PdR 125:2022 (ICS 03.100.01)
-
-      - D.Lgs. 11 aprile 2006 n.198 (Codice delle pari opportunità)
-
-      - L. 5 novembre 2021 n.162 (parità salariale)
-
-      - Agenda ONU 2030, Obiettivo 5 (uguaglianza di genere)
-
-      - Strategia Nazionale sulla Parità di Genere 2021–2025
     documentation: "https://github.com/jobonaf/uni-pdr-125-kpi/blob/main/README.md"
     apiDocumentation: null
+
     features:
-      - "Compilazione guidata KPI per fascia dimensionale (1–4)"
-      - "Verifica automatica KPI obbligatori per fascia (§5.2–5.7 norma)"
-      - "Score globale ponderato con soglia certificazione 60%"
-      - "Dashboard con radar chart e bar chart per area"
-      - "Confronto storico multi-annualità"
-      - "Report stampabile / PDF via browser"
-      - "Import/Export JSON (formato aperto)"
-      - "Benchmark ATECO da Appendice B UNI/PdR 125:2022"
-      - "Link a fonti ufficiali aggiornate (ISTAT, INPS, Consob, Eurostat)"
+      - "Compilazione guidata KPI per fascia dimensionale"
+      - "Verifica automatica KPI obbligatori"
+      - "Calcolo score certificazione (≥60%)"
+      - "Dashboard interattiva"
+      - "Confronto storico"
+      - "Report PDF"
+      - "Import/Export JSON"
+
     screenshots:
       - "https://raw.githubusercontent.com/jobonaf/uni-pdr-125-kpi/main/docs/screenshots/dashboard.png"
       - "https://raw.githubusercontent.com/jobonaf/uni-pdr-125-kpi/main/docs/screenshots/compilazione.png"
+
     inputTypes:
       - "application/json"
       - "text/plain"
+
     outputTypes:
       - "application/json"
       - "application/pdf"
       - "text/html"
+
 legal:
   license: "EUPL-1.2"
   mainCopyrightOwner: "Giovanni Bonafè"
   repoOwner: "Giovanni Bonafè"
   authorsFile: "AUTHORS.md"
+
 maintenance:
-  type: "internal"
+  type: internal
   contacts:
     - name: "Giovanni Bonafè"
       email: "midable@gmail.com"
+
 localisation:
   localisationReady: false
   availableLanguages:
     - it
+
+usedBy: []
+
+roadmap: "https://github.com/jobonaf/uni-pdr-125-kpi/issues"
+
+it:
+  countryExtensionVersion: "1.0"
+
+  conforme:
+    lineeGuidaDesign: false
+    modelloInteroperabilita: false
+    misureMinimeSicurezza: false
+    gdpr: false
+
+  piattaforme:
+    web: true
+
+  riuso:
+    codiceIPA: null
+    modalità: "open source"
