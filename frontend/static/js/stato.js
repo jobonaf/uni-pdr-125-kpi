@@ -61,6 +61,15 @@ export function validaImport(catalogo, dati) {
       stato.kpi_values[id] = { valore: v.valore, note: String(v.note ?? ""), percentuale: String(v.percentuale ?? "") };
     }
   }
-  if (oggetto(dati.calc_data)) stato.calc_data = dati.calc_data;
+  if (oggetto(dati.calc_data)) {   // solo calcolatori noti e solo input numerici
+    for (const [id, inp] of Object.entries(dati.calc_data)) {
+      if (!catalogo.calcolatori[id] || !oggetto(inp)) continue;
+      const puliti = {};
+      for (const i of catalogo.calcolatori[id].inputs) {
+        if (typeof inp[i.name] === "number" && Number.isFinite(inp[i.name])) puliti[i.name] = inp[i.name];
+      }
+      stato.calc_data[id] = puliti;
+    }
+  }
   return { ok: errori.length === 0, errori, avvisi, stato: errori.length ? null : stato };
 }

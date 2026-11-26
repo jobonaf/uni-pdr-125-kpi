@@ -1,5 +1,6 @@
 // frontend/static/js/app.js — interfaccia (DOM). La logica è in scoring.js e stato.js.
 import { calcolaScoreGlobale, calcolaKpiNonCompilati, kpiApplicabile, certificabile } from "./scoring.js";
+import { calcolaKpi } from "./calcolatori.js";
 import { statoIniziale, creaExport, validaImport } from "./stato.js";
 
 const CHIAVE = "uni-pdr-125-kpi:stato";
@@ -52,6 +53,33 @@ function vistaOrg() {
   );
 }
 
+function calcolatore(k, v) {
+  const cfg = catalogo.calcolatori[k.id];
+  if (!cfg) return null;
+  const dati = () => stato.calc_data[k.id] ?? {};   // la voce si crea solo quando l'utente scrive
+  const esito = el("div", { class: "small mt-2", role: "status" });
+  const campi = cfg.inputs.map((i) => el("div", { class: "mb-2" },
+    el("label", { for: `c-${k.id}-${i.name}`, class: "form-label small" }, i.label),
+    el("input", { id: `c-${k.id}-${i.name}`, type: "number", class: "form-control w-auto", value: dati()[i.name] ?? "",
+      step: i.type === "int" ? "1" : "any", min: i.min, max: i.max,
+      oninput: (e) => {
+        const d = (stato.calc_data[k.id] ??= {});
+        if (e.target.value === "") delete d[i.name]; else d[i.name] = Number(e.target.value);
+        if (!Object.keys(d).length) delete stato.calc_data[k.id];
+        salva();
+      } })));
+  const applica = () => {
+    const r = calcolaKpi(catalogo, k.id, dati());
+    if (!r) { esito.textContent = "Compila tutti i campi con valori validi (i totali devono essere maggiori di zero)."; return; }
+    v.valore = r.valutazione; v.percentuale = r.valore.toFixed(1); salva();
+    document.getElementById(`v-${k.id}`).value = r.valutazione;
+    esito.textContent = `Valore calcolato: ${v.percentuale} → ${r.valutazione}`;
+  };
+  return el("details", { class: "mt-2" }, el("summary", { class: "small" }, "Calcolatore"),
+    el("p", { class: "small fw-bold mt-2 mb-2" }, cfg.label), campi,
+    el("button", { class: "btn btn-sm btn-outline-primary", type: "button", onclick: applica }, "Calcola e imposta valutazione"), esito);
+}
+
 function vistaComp() {
   const fascia = stato.azienda.fascia;
   return el("section", {}, el("h1", { class: "h3" }, `Compilazione KPI — fascia ${fascia}`),
@@ -69,6 +97,7 @@ function vistaComp() {
             el("select", { id: `v-${k.id}`, class: "form-select w-auto mt-2",
               onchange: (e) => { v.valore = e.target.value; salva(); } },
               catalogo.scoring.valutazioni.map((o) => el("option", { value: o, selected: o === v.valore }, o))),
+            calcolatore(k, v),
             el("details", { class: "mt-2" }, el("summary", { class: "small" }, "Descrizione estesa"), el("p", {}, k.descrizione)));
         }));
     }));

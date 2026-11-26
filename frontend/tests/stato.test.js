@@ -41,3 +41,12 @@ test("import: KPI sconosciuti ignorati con avviso, KPI mancanti a N/V", () => {
   assert.equal(r.stato.kpi_values.c1.valore, "N/V");
   assert.ok(!("zzz" in r.stato.kpi_values));
 });
+
+test("import: calc_data filtrato (calcolatori noti, solo input numerici) e round-trip", () => {
+  const s = statoIniziale(catalogo, 2026);
+  s.calc_data.r1 = { retr_uomini: 30000, retr_donne: 27000 };
+  const d = JSON.parse(JSON.stringify(creaExport(catalogo, s)));
+  assert.deepEqual(validaImport(catalogo, d).stato.calc_data, s.calc_data);
+  d.calc_data = { r1: { retr_uomini: 1, retr_donne: "x", extra: 5 }, zzz: { a: 1 }, oc5: null };
+  assert.deepEqual(validaImport(catalogo, d).stato.calc_data, { r1: { retr_uomini: 1 } });
+});

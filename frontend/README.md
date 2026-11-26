@@ -15,4 +15,6 @@ cd frontend && node --test               # test della logica JavaScript
 Il file JSON scaricato è compatibile con quello dell'app Streamlit (versione 2.0). A differenza di Streamlit,
 l'import viene validato: fascia 1–4, id dei KPI noti e valori ammessi; i KPI sconosciuti vengono ignorati con un avviso.
 
-Non ancora presenti: calcolatori dei KPI quantitativi, report stampabile dedicato, storico e confronto tra anni.
+Calcolatori: disponibili per i 6 KPI quantitativi che li definiscono nel catalogo (oc1, oc3, oc5, r1, ge4, ge5).
+
+Non ancora presenti: report stampabile dedicato, storico e confronto tra anni.

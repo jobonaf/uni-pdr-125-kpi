@@ -7,6 +7,11 @@ e il progetto adotta il [Versionamento Semantico](https://semver.org/lang/it/).
 
 ## [Non rilasciato]
 
+### Aggiunto (calcolatori nel frontend, issue #15)
+
+- Calcolatore nella pagina Compilazione per i KPI quantitativi che ne hanno uno nel catalogo (oc1, oc3, oc5, r1, ge4, ge5): inserisce gli input, calcola con `calcolaKpi`, imposta valutazione e valore percentuale
+- Gli input dei calcolatori vengono salvati nel browser e nell'export (`calc_data`, come in Streamlit); all'import vengono filtrati (calcolatori noti, solo valori numerici) e coperti da test
+
 ### Aggiunto (frontend statico, prima versione, issue #24)
 
 - `frontend/index.html` e `static/js/app.js`: pagine Organizzazione (fascia con card), Compilazione KPI per area, Dashboard (score globale, soglia, barre per area, stampa) e Salva/carica; dati nel `localStorage`
