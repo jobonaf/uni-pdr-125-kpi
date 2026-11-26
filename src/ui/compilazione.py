@@ -3,6 +3,7 @@ import streamlit as st
 from src.data.kpi_catalog import AREE, CALCOLATORI_KPI, VALUTAZIONI
 from src.logic.scoring import kpi_applicabile, is_kpi_da_rendicontare, calcola_score_area
 from src.logic.calcolatori import calcola_kpi
+from src.logic.catalogo import nota_equivalente
 
 def applica_calcolatore(kpi_id):
     """Callback del pulsante del calcolatore.
@@ -52,6 +53,9 @@ def render_compilazione():
                             badge_text += " | 📋 DA RENDICONTARE"
                         st.markdown(f"**{kpi['testo']}**")
                         st.caption(badge_text)
+                        nota = nota_equivalente(kpi)
+                        if nota:
+                            st.caption(f"ℹ️ {nota}")
                         if kpi.get("soglia"):
                             st.caption(f"*Soglia: {kpi['soglia']}*")
                         with st.expander("📖 Descrizione estesa"):

@@ -11,6 +11,9 @@ Lo strumento è strutturato in tre livelli separati:
 Questa separazione consente di sostituire il layer UI (es. migrazione da
 Streamlit a Bootstrap Italia) senza modificare la logica di calcolo.
 
+Funzioni, input/output, regole di validazione, diagrammi di flusso ed equivalenza
+Python ↔ JavaScript sono descritti in [`logica-calcolo.md`](logica-calcolo.md).
+
 ## Struttura di `src/`
 
 ```
@@ -24,7 +27,8 @@ src/
 │   ├── scoring.py          # calcola_score_area(), calcola_score_globale(),
 │   │                       # kpi_applicabile(), is_kpi_da_rendicontare(),
 │   │                       # calcola_kpi_non_compilati()
-│   └── calcolatori.py      # calcola_valore(), valuta(), calcola_kpi()
+│   ├── calcolatori.py      # calcola_valore(), valuta(), calcola_kpi()
+│   └── catalogo.py         # trova_kpi(), formatta_fasce(), nota_equivalente()
 └── ui/
     ├── __init__.py
     ├── anagrafica.py        # render_anagrafica()
@@ -48,7 +52,8 @@ src/
     "testo": "...",                # testo breve per UI
     "descrizione": "...",          # testo esteso normativo
     "fasceRichieste": [1, 2, 3, 4], # fasce dimensionali applicabili
-    "soglia": "..."                # solo per KPI quantitativi
+    "soglia": "...",               # solo per KPI quantitativi
+    "equivalente": "oc2"           # opzionale: altro KPI della coppia mutuamente esclusiva
 }
 ```
 

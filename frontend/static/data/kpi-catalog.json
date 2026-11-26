@@ -303,6 +303,7 @@
             1,
             2
           ],
+          "equivalente": "oc2",
           "soglia": "+10pp vs biennio precedente → parità"
         },
         {
@@ -315,6 +316,7 @@
             3,
             4
           ],
+          "equivalente": "oc1",
           "soglia": "+10pp vs media ATECO industry"
         },
         {
@@ -326,6 +328,7 @@
           "fasceRichieste": [
             2
           ],
+          "equivalente": "oc4",
           "soglia": "+10pp vs biennio precedente"
         },
         {
@@ -338,6 +341,7 @@
             3,
             4
           ],
+          "equivalente": "oc3",
           "soglia": "+10pp vs media ATECO industry"
         },
         {

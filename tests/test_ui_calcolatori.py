@@ -30,3 +30,17 @@ def test_pulsante_calcolatore_imposta_valutazione(app, kpi_id, inputs, valutazio
     assert app.selectbox(key=f"sel_{kpi_id}").value == valutazione
     assert app.text_input(key=f"perc_{kpi_id}").value == percentuale
     assert app.session_state.kpi_values[kpi_id]["valore"] == valutazione
+
+
+@pytest.mark.parametrize("fascia,kpi_id,frammenti", [
+    (1, "oc1", ["fascia 1–2", "benchmark di settore"]),
+    (3, "oc2", ["fascia 3–4", "biennio precedente"]),
+])
+def test_nota_equivalente_visibile_nel_badge(app, fascia, kpi_id, frammenti):
+    """Issue #14: i KPI a coppia mutuamente esclusiva mostrano una nota esplicativa."""
+    app.session_state.azienda["fascia"] = fascia
+    app.run()
+    assert not app.exception
+    note = [c.value for c in app.caption if c.value.startswith("ℹ️")]
+    assert note, "nessuna nota ℹ️ trovata"
+    assert any(all(f in n for f in frammenti) for n in note), note

@@ -159,12 +159,15 @@ AREE = [
             # fasce 1-2, media ATECO di settore per le fasce 3-4). Le `fasceRichieste`
             # delle due KPI di ciascuna coppia NON devono mai sovrapporsi, altrimenti
             # lo score conta due volte la stessa metrica (verificato da tests/test_catalogo.py).
+            # Il campo `equivalente` indica l'altro KPI della coppia ed è usato dall'interfaccia
+            # per spiegare all'utente perché in un'area compaiono indicatori quasi identici.
             # Cfr. UNI/PdR 125:2022, Prospetto 6.
             {
                 "id": "oc1", "punti": 25, "tipo": "quantitativo",
                 "testo": "% donne sull'organico totale — fascia 1-2 (confronto biennale)",
                 "descrizione": "La percentuale di donne sull'organico totale deve crescere di almeno +10 punti percentuali rispetto al biennio precedente.",
                 "fasceRichieste": [1, 2],
+                "equivalente": "oc2",
                 "soglia": "+10pp vs biennio precedente → parità"
             },
             {
@@ -172,6 +175,7 @@ AREE = [
                 "testo": "% donne sull'organico totale vs benchmark industry — fascia 3-4",
                 "descrizione": "La percentuale di donne sull'organico deve essere almeno +10 punti percentuali superiore alla media del settore di appartenenza.",
                 "fasceRichieste": [3, 4],
+                "equivalente": "oc1",
                 "soglia": "+10pp vs media ATECO industry"
             },
             {
@@ -179,6 +183,7 @@ AREE = [
                 "testo": "% donne dirigenti — fascia 2 (confronto biennale)",
                 "descrizione": "La percentuale di donne con qualifica dirigenziale deve crescere di almeno +10 punti percentuali rispetto al biennio precedente.",
                 "fasceRichieste": [2],
+                "equivalente": "oc4",
                 "soglia": "+10pp vs biennio precedente"
             },
             {
@@ -186,6 +191,7 @@ AREE = [
                 "testo": "% donne dirigenti vs benchmark industry — fascia 3-4",
                 "descrizione": "La percentuale di donne con qualifica di dirigente deve essere almeno +10pp superiore alla media dell'industry.",
                 "fasceRichieste": [3, 4],
+                "equivalente": "oc3",
                 "soglia": "+10pp vs media ATECO industry"
             },
             {

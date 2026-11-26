@@ -5,10 +5,22 @@ from src.data.kpi_catalog import AREE
 KPI = {k["id"]: k for a in AREE for k in a["kpi"]}
 
 
-@pytest.mark.parametrize("a,b", [("oc1", "oc2"), ("oc3", "oc4")])
+COPPIE = sorted({tuple(sorted((k["id"], k["equivalente"]))) for k in KPI.values() if k.get("equivalente")})
+
+
+def test_coppie_attese():
+    assert COPPIE == [("oc1", "oc2"), ("oc3", "oc4")]
+
+
+@pytest.mark.parametrize("a,b", COPPIE)
 def test_coppie_kpi_mutuamente_esclusive(a, b):
     """Issue #14: stessa metrica con benchmark diverso -> mai nella stessa fascia."""
     assert not set(KPI[a]["fasceRichieste"]) & set(KPI[b]["fasceRichieste"])
+
+
+@pytest.mark.parametrize("a,b", COPPIE)
+def test_equivalente_simmetrico(a, b):
+    assert KPI[a]["equivalente"] == b and KPI[b]["equivalente"] == a
 
 
 def test_id_kpi_univoci():

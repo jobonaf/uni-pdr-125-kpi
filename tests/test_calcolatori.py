@@ -1,5 +1,4 @@
 # tests/test_calcolatori.py
-import ast
 import json
 import pathlib
 
@@ -53,20 +52,6 @@ def test_calcola_kpi_input_mancanti_o_kpi_senza_calcolatore():
     assert calcola_kpi("oc5", {"donne_responsabili": 4}) is None
     assert calcola_kpi("oc5", {"donne_responsabili": 4, "totale_responsabili": ""}) is None
     assert calcola_kpi("c1", {}) is None
-
-
-@pytest.mark.parametrize("pacchetto", ["data", "logic"])
-def test_livelli_dati_e_logica_non_dipendono_da_streamlit(pacchetto):
-    """Separazione dei livelli (issue #21): niente UI in src/data e src/logic."""
-    for f in (ROOT / "src" / pacchetto).glob("*.py"):
-        albero = ast.parse(f.read_text(encoding="utf-8"))
-        for nodo in ast.walk(albero):
-            nomi = []
-            if isinstance(nodo, ast.Import):
-                nomi = [a.name for a in nodo.names]
-            elif isinstance(nodo, ast.ImportFrom):
-                nomi = [nodo.module or ""]
-            assert not any(n.split(".")[0] == "streamlit" for n in nomi), f"{f.name} importa streamlit"
 
 
 def test_calcola_kpi_divisione_per_zero_restituisce_none():

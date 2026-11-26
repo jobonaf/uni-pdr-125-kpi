@@ -7,6 +7,12 @@ e il progetto adotta il [Versionamento Semantico](https://semver.org/lang/it/).
 
 ## [Non rilasciato]
 
+### Aggiunto (documentazione della logica e note sui KPI equivalenti, issue #21 e #14)
+
+- `docs/logica-calcolo.md`: input/output di ogni funzione critica, perimetro della logica "pura", stato della validazione, tre diagrammi di flusso (Mermaid), esempio numerico e tabella di equivalenza Python ↔ JavaScript
+- `src/logic/catalogo.py` (`trova_kpi`, `formatta_fasce`, `nota_equivalente`) e campo `equivalente` sui KPI oc1–oc4: l'interfaccia mostra accanto al badge una nota sulle fasce di applicabilità e sull'indicatore equivalente
+- Test: purezza di `src/data` e `src/logic` (niente UI, rete, database, file system), copertura della documentazione (ogni funzione pubblica Python e ogni export JavaScript deve essere documentata), nota visibile nell'interfaccia, coppie di KPI ricavate dai dati
+
 ### Aggiunto (logica di scoring in JavaScript, issue #22)
 
 - `frontend/static/js/scoring.js` e `calcolatori.js`: porting dei moduli Python `scoring.py` e `calcolatori.py` (funzioni pure che ricevono il catalogo JSON, nessun accesso al DOM)
