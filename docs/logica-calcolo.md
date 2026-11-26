@@ -144,3 +144,4 @@ Le funzioni JavaScript ricevono il catalogo (`kpi-catalog.json`) come primo argo
 | `calcolatori.calcola_kpi(kpi_id, inputs)` | `calcolaKpi(catalogo, kpiId, inputs)` | restituisce `{valore, valutazione}` invece di una tupla; `null` anche con `NaN` o risultato non finito |
 | `catalogo.trova_kpi`, `formatta_fasce`, `nota_equivalente` | *non ancora portate* | verranno portate con il frontend (nota nel badge, issue #14) |
 | — (la UI confronta con `SOGLIA_CERTIFICAZIONE`) | `certificabile(catalogo, scoreGlobale)` | solo JavaScript |
+| — (stato in `st.session_state`, formato JSON in `import_export.py`) | `statoIniziale(catalogo, anno)`, `creaExport(catalogo, stato, adesso)`, `validaImport(catalogo, dati)` | solo JavaScript (`stato.js`): stesso formato versione 2.0; l'import è **validato** (fascia 1–4, id e valori ammessi), cosa che l'app Streamlit non fa |

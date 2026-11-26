@@ -7,6 +7,13 @@ e il progetto adotta il [Versionamento Semantico](https://semver.org/lang/it/).
 
 ## [Non rilasciato]
 
+### Aggiunto (frontend statico, prima versione, issue #24)
+
+- `frontend/index.html` e `static/js/app.js`: pagine Organizzazione (fascia con card), Compilazione KPI per area, Dashboard (score globale, soglia, barre per area, stampa) e Salva/carica; dati nel `localStorage`
+- `static/js/stato.js`: export compatibile con il JSON versione 2.0 di Streamlit e **validazione dell'import** (fascia, id e valori dei KPI)
+- Bootstrap Italia 2.18.3 incluso in `frontend/static/vendor/` (CSS, icone, font), senza dipendere da CDN
+- Non ancora presenti: calcolatori dei KPI quantitativi, report dedicato, storico e confronto
+
 ### Aggiunto (documentazione della logica e note sui KPI equivalenti, issue #21 e #14)
 
 - `docs/logica-calcolo.md`: input/output di ogni funzione critica, perimetro della logica "pura", stato della validazione, tre diagrammi di flusso (Mermaid), esempio numerico e tabella di equivalenza Python ↔ JavaScript

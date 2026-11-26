@@ -1,0 +1,6 @@
+@media print { nav, .no-print { display: none !important; } }
+.fascia-card { cursor: pointer; }
+.fascia-card.selected { border: 2px solid var(--bs-primary, #06c); }
+.kpi { border-bottom: 1px solid #ddd; padding: 1rem 0; }
+.barra { height: .6rem; background: #e6e9f2; border-radius: .3rem; overflow: hidden; }
+.barra > span { display: block; height: 100%; }
