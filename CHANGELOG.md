@@ -7,6 +7,26 @@ e il progetto adotta il [Versionamento Semantico](https://semver.org/lang/it/).
 
 ## [Non rilasciato]
 
+### Modificato
+
+- Calcolatori KPI (`CALCOLATORI_KPI`) resi **dichiarativi**: formule e soglie sono dati (serializzabili in JSON) invece di funzioni lambda; l'interpretazione è nel nuovo modulo puro `src/logic/calcolatori.py` (prerequisito per #22 e #23)
+- `src/logic/scoring.py` non importa più Streamlit; rimossa la doppia definizione di `init_calculator_state` e la funzione `update_kpi_from_calculator`, ora sostituite da `calcola_kpi()` e dalla callback `applica_calcolatore` in `src/ui/compilazione.py` (issue #21)
+- Commento inline sulle coppie KPI mutuamente esclusive oc1/oc2 e oc3/oc4 (issue #14)
+
+### Corretto
+
+- Il pulsante "Calcola e imposta valutazione" sollevava `StreamlitAPIException` (modifica di un widget già istanziato): ora usa una callback `on_click`
+- README: comando di avvio su Windows puntava a `src/app.py` anziché a `streamlit_app.py`
+
+### Aggiunto
+
+- Test di equivalenza dei calcolatori con fixture generate dalle funzioni originali (`tests/fixtures/calcolatori_golden.json`), test di serializzabilità JSON, di separazione dei livelli e di integrazione UI (`AppTest`)
+- `.gitignore`
+
+### Rimosso
+
+- `issues/epic-migrazione-bootstrap-italia-github-pages.md`: bozza generica con riferimenti a issue inesistenti; l'epic di riferimento è la #20 su GitHub
+
 ### In corso
 - Migrazione dell'interfaccia da Streamlit a Bootstrap Italia (Design System .italia)
 - Calcolatore inline per i KPI quantitativi

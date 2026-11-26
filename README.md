@@ -113,10 +113,20 @@ L'app si aprirà automaticamente nel browser su `http://localhost:8501`.
 
 > **Windows — se `streamlit` non viene trovato nel PATH:**
 > ```bash
-> python -m streamlit run src/app.py
+> python -m streamlit run streamlit_app.py
 > # oppure, se l'eseguibile è in .venv:
 > .venv\Scripts\python.exe -m streamlit run streamlit_app.py
 > ```
+
+## Test
+
+```
+pip install pytest
+python -m pytest -q tests
+```
+
+I test sulla logica (`src/data`, `src/logic`) non richiedono Streamlit; quelli di
+interfaccia (`tests/test_ui_calcolatori.py`) vengono saltati se Streamlit non è installato.
 
 ## Utilizzo
 

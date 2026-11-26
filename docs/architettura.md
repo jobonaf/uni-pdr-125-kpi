@@ -21,9 +21,10 @@ src/
 │   └── kpi_catalog.py      # AREE, CLUSTER, KPI_DA_RENDICONTARE_PER_FASCIA
 ├── logic/
 │   ├── __init__.py
-│   └── scoring.py          # calcola_score_area(), calcola_score_globale(),
-│                           # kpi_applicabile(), is_kpi_da_rendicontare(),
-│                           # calcola_kpi_non_compilati()
+│   ├── scoring.py          # calcola_score_area(), calcola_score_globale(),
+│   │                       # kpi_applicabile(), is_kpi_da_rendicontare(),
+│   │                       # calcola_kpi_non_compilati()
+│   └── calcolatori.py      # calcola_valore(), valuta(), calcola_kpi()
 └── ui/
     ├── __init__.py
     ├── anagrafica.py        # render_anagrafica()
@@ -82,6 +83,15 @@ src/
     "esportato": "2025-04-20T10:30:00"
 }
 ```
+
+## Calcolatori dei KPI quantitativi
+
+`CALCOLATORI_KPI` (in `kpi_catalog.py`) descrive ogni calcolatore **solo con dati**
+(input, tipo di formula, soglie), senza funzioni: è quindi serializzabile in JSON e
+riusabile lato client. `src/logic/calcolatori.py` ne interpreta `formula`
+(`differenza`, `percentuale`, `gap_percentuale`) e `valutazione`
+(`maggiore_uguale`, `minore`). Livelli `data` e `logic` non importano Streamlit
+(verificato da `tests/test_calcolatori.py`).
 
 ## Logica di calcolo dello score
 

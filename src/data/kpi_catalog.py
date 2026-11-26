@@ -153,6 +153,12 @@ AREE = [
         "icona": "📈",
         "descrizione": "Misura l'effettivo accesso neutrale rispetto al genere ai percorsi di carriera e di crescita professionale.",
         "kpi": [
+            # NB: oc1/oc2 e oc3/oc4 sono coppie MUTUAMENTE ESCLUSIVE: stessa metrica,
+            # benchmark diverso a seconda della fascia (biennio precedente per le
+            # fasce 1-2, media ATECO di settore per le fasce 3-4). Le `fasceRichieste`
+            # delle due KPI di ciascuna coppia NON devono mai sovrapporsi, altrimenti
+            # lo score conta due volte la stessa metrica (verificato da tests/test_catalogo.py).
+            # Cfr. UNI/PdR 125:2022, Prospetto 6.
             {
                 "id": "oc1", "punti": 25, "tipo": "quantitativo",
                 "testo": "% donne sull'organico totale — fascia 1-2 (confronto biennale)",
@@ -324,6 +330,19 @@ KPI_DA_RENDICONTARE_PER_FASCIA = {
 # CALCOLATORI PER KPI QUANTITATIVI
 # =============================================================================
 
+# Ogni calcolatore è descritto SOLO con dati (nessuna funzione), così il
+# catalogo è serializzabile in JSON e riusabile lato client (JavaScript).
+# L'interpretazione di "formula" e "valutazione" è in src/logic/calcolatori.py.
+#
+# formula.tipo:
+#   "differenza"       -> a - b
+#   "percentuale"      -> parte / totale * 100
+#   "gap_percentuale"  -> (riferimento - confronto) / riferimento * 100
+#                         (0 se riferimento <= 0)
+# valutazione.confronto:
+#   "maggiore_uguale"  -> Sì se v >= soglia_si; Parziale se v >= soglia_parziale; altrimenti No
+#   "minore"           -> Sì se v <  soglia_si; Parziale se v <  soglia_parziale; altrimenti No
+
 CALCOLATORI_KPI = {
     "oc1": {
         "label": "Calcola Δ percentuale donne sull'organico (biennale)",
@@ -331,9 +350,9 @@ CALCOLATORI_KPI = {
             {"name": "perc_donne_corrente", "label": "% donne anno corrente", "type": "float", "min": 0.0, "max": 100.0},
             {"name": "perc_donne_precedente", "label": "% donne biennio precedente", "type": "float", "min": 0.0, "max": 100.0}
         ],
-        "formula": lambda inputs: inputs["perc_donne_corrente"] - inputs["perc_donne_precedente"],
+        "formula": {"tipo": "differenza", "a": "perc_donne_corrente", "b": "perc_donne_precedente"},
         "soglia": 10,
-        "valutazione": lambda val: "Sì" if val >= 10 else "Parziale" if val >= 5 else "No"
+        "valutazione": {"confronto": "maggiore_uguale", "soglia_si": 10, "soglia_parziale": 5}
     },
     "oc3": {
         "label": "Calcola Δ percentuale donne dirigenti (biennale)",
@@ -341,9 +360,9 @@ CALCOLATORI_KPI = {
             {"name": "perc_dir_corrente", "label": "% donne dirigenti anno corrente", "type": "float", "min": 0.0, "max": 100.0},
             {"name": "perc_dir_precedente", "label": "% donne dirigenti biennio precedente", "type": "float", "min": 0.0, "max": 100.0}
         ],
-        "formula": lambda inputs: inputs["perc_dir_corrente"] - inputs["perc_dir_precedente"],
+        "formula": {"tipo": "differenza", "a": "perc_dir_corrente", "b": "perc_dir_precedente"},
         "soglia": 10,
-        "valutazione": lambda val: "Sì" if val >= 10 else "Parziale" if val >= 5 else "No"
+        "valutazione": {"confronto": "maggiore_uguale", "soglia_si": 10, "soglia_parziale": 5}
     },
     "oc5": {
         "label": "Calcola % donne responsabili di unità organizzative",
@@ -351,9 +370,9 @@ CALCOLATORI_KPI = {
             {"name": "donne_responsabili", "label": "Numero donne responsabili", "type": "int", "min": 0},
             {"name": "totale_responsabili", "label": "Numero totale responsabili", "type": "int", "min": 1}
         ],
-        "formula": lambda inputs: (inputs["donne_responsabili"] / inputs["totale_responsabili"]) * 100,
+        "formula": {"tipo": "percentuale", "parte": "donne_responsabili", "totale": "totale_responsabili"},
         "soglia": 40,
-        "valutazione": lambda val: "Sì" if val >= 40 else "Parziale" if val >= 30 else "No"
+        "valutazione": {"confronto": "maggiore_uguale", "soglia_si": 40, "soglia_parziale": 30}
     },
     "r1": {
         "label": "Calcola gap retributivo per stesso livello/mansione",
@@ -361,9 +380,9 @@ CALCOLATORI_KPI = {
             {"name": "retr_uomini", "label": "Retribuzione media annua lorda uomini (€)", "type": "float", "min": 0.0},
             {"name": "retr_donne", "label": "Retribuzione media annua lorda donne (€)", "type": "float", "min": 0.0}
         ],
-        "formula": lambda inputs: (inputs["retr_uomini"] - inputs["retr_donne"]) / inputs["retr_uomini"] * 100 if inputs["retr_uomini"] > 0 else 0,
+        "formula": {"tipo": "gap_percentuale", "riferimento": "retr_uomini", "confronto": "retr_donne"},
         "soglia": 10,
-        "valutazione": lambda val: "Sì" if val < 10 else "Parziale" if val < 15 else "No"
+        "valutazione": {"confronto": "minore", "soglia_si": 10, "soglia_parziale": 15}
     },
     "ge4": {
         "label": "Calcola tasso di fruizione congedi di paternità obbligatori",
@@ -371,9 +390,9 @@ CALCOLATORI_KPI = {
             {"name": "padri_fruitori", "label": "Numero padri che hanno fruito del congedo", "type": "int", "min": 0},
             {"name": "padri_potenziali", "label": "Numero totale padri potenziali", "type": "int", "min": 1}
         ],
-        "formula": lambda inputs: (inputs["padri_fruitori"] / inputs["padri_potenziali"]) * 100,
+        "formula": {"tipo": "percentuale", "parte": "padri_fruitori", "totale": "padri_potenziali"},
         "soglia": 100,
-        "valutazione": lambda val: "Sì" if val >= 100 else "Parziale" if val >= 80 else "No"
+        "valutazione": {"confronto": "maggiore_uguale", "soglia_si": 100, "soglia_parziale": 80}
     },
     "ge5": {
         "label": "Calcola tasso di fruizione giorni di congedo di paternità",
@@ -381,8 +400,8 @@ CALCOLATORI_KPI = {
             {"name": "giorni_fruiti", "label": "Giorni medi fruiti per padre", "type": "float", "min": 0.0},
             {"name": "giorni_legge", "label": "Giorni previsti dalla legge", "type": "float", "min": 1.0}
         ],
-        "formula": lambda inputs: (inputs["giorni_fruiti"] / inputs["giorni_legge"]) * 100,
+        "formula": {"tipo": "percentuale", "parte": "giorni_fruiti", "totale": "giorni_legge"},
         "soglia": 100,
-        "valutazione": lambda val: "Sì" if val >= 100 else "Parziale" if val >= 80 else "No"
+        "valutazione": {"confronto": "maggiore_uguale", "soglia_si": 100, "soglia_parziale": 80}
     },
 }
