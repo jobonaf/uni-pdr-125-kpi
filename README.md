@@ -125,6 +125,13 @@ pip install pytest
 python -m pytest -q tests
 ```
 
+Per la logica JavaScript del frontend serve Node 20+ (nessun `npm install`):
+
+```
+cd frontend
+node --test
+```
+
 I test sulla logica (`src/data`, `src/logic`) non richiedono Streamlit; quelli di
 interfaccia (`tests/test_ui_calcolatori.py`) vengono saltati se Streamlit non è installato.
 

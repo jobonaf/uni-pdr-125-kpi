@@ -67,3 +67,7 @@ def test_livelli_dati_e_logica_non_dipendono_da_streamlit(pacchetto):
             elif isinstance(nodo, ast.ImportFrom):
                 nomi = [nodo.module or ""]
             assert not any(n.split(".")[0] == "streamlit" for n in nomi), f"{f.name} importa streamlit"
+
+
+def test_calcola_kpi_divisione_per_zero_restituisce_none():
+    assert calcola_kpi("oc5", {"donne_responsabili": 4, "totale_responsabili": 0}) is None

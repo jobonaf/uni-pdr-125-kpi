@@ -101,6 +101,16 @@ unica fonte dei dati. I parametri di scoring (soglia di certificazione, fattore 
 "Parziale", valutazioni ammesse) vivono in `kpi_catalog.py` e sono esportati nella sezione
 `scoring` del JSON. `tests/test_export_catalog.py` impedisce che JSON e catalogo divergano.
 
+## Logica di scoring in JavaScript
+
+`frontend/static/js/scoring.js` e `calcolatori.js` replicano `scoring.py` e `calcolatori.py`
+come funzioni pure che ricevono il catalogo (`kpi-catalog.json`) come primo argomento.
+Le due implementazioni sono tenute allineate da fixture condivise in `tests/fixtures/`
+(`calcolatori_golden.json`, `scoring_golden.json`): i test Python (`pytest`) e quelli
+JavaScript (`cd frontend && node --test`) verificano gli stessi risultati. Se la logica di
+scoring cambia volontariamente, rigenerare con `python scripts/export_golden_scoring.py`
+e aggiornare entrambe le implementazioni.
+
 ## Logica di calcolo dello score
 
 Lo score di ogni area è calcolato come:

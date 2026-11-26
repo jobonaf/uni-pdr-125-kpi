@@ -7,6 +7,16 @@ e il progetto adotta il [Versionamento Semantico](https://semver.org/lang/it/).
 
 ## [Non rilasciato]
 
+### Aggiunto (logica di scoring in JavaScript, issue #22)
+
+- `frontend/static/js/scoring.js` e `calcolatori.js`: porting dei moduli Python `scoring.py` e `calcolatori.py` (funzioni pure che ricevono il catalogo JSON, nessun accesso al DOM)
+- Test JavaScript con il runner integrato di Node (`cd frontend && node --test`), eseguiti contro fixture condivise con il Python: `tests/fixtures/calcolatori_golden.json` e `tests/fixtures/scoring_golden.json` (124 scenari su 4 fasce, generati da `scripts/export_golden_scoring.py`)
+- `tests/test_scoring_golden.py`: il Python rispetta le stesse fixture
+
+### Modificato (calcolatori)
+
+- `calcola_kpi()` restituisce `None` anche in caso di divisione per zero (prima sollevava `ZeroDivisionError`), come la versione JavaScript
+
 ### Aggiunto (esportazione catalogo, issue #23)
 
 - `scripts/export_catalog.py` genera `frontend/static/data/kpi-catalog.json` (aree, KPI, cluster, KPI da rendicontare, calcolatori, parametri di scoring); con `--check` verifica che il file sia aggiornato

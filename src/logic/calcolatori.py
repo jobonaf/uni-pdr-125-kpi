@@ -38,7 +38,8 @@ def calcola_kpi(kpi_id, inputs):
     """Esegue il calcolatore di un KPI.
 
     Restituisce (valore, valutazione), oppure None se il KPI non ha un
-    calcolatore o se manca almeno un input.
+    calcolatore, se manca almeno un input o se il calcolo non è definito
+    (divisione per zero).
     """
     config = CALCOLATORI_KPI.get(kpi_id)
     if not config:
@@ -46,5 +47,8 @@ def calcola_kpi(kpi_id, inputs):
     nomi = [i["name"] for i in config["inputs"]]
     if any(inputs.get(n) in (None, "") for n in nomi):
         return None
-    valore = calcola_valore(config, inputs)
+    try:
+        valore = calcola_valore(config, inputs)
+    except ZeroDivisionError:
+        return None
     return valore, valuta(config, valore)
