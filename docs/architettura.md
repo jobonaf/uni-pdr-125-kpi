@@ -93,6 +93,14 @@ riusabile lato client. `src/logic/calcolatori.py` ne interpreta `formula`
 (`maggiore_uguale`, `minore`). Livelli `data` e `logic` non importano Streamlit
 (verificato da `tests/test_calcolatori.py`).
 
+## Esportazione per il frontend statico
+
+`scripts/export_catalog.py` serializza il catalogo (`src/data/export_catalog.py`) in
+`frontend/static/data/kpi-catalog.json`, che il frontend JavaScript (issue #20) usa come
+unica fonte dei dati. I parametri di scoring (soglia di certificazione, fattore per
+"Parziale", valutazioni ammesse) vivono in `kpi_catalog.py` e sono esportati nella sezione
+`scoring` del JSON. `tests/test_export_catalog.py` impedisce che JSON e catalogo divergano.
+
 ## Logica di calcolo dello score
 
 Lo score di ogni area è calcolato come:

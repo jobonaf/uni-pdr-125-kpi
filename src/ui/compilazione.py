@@ -1,6 +1,6 @@
 # src/ui/compilazione.py
 import streamlit as st
-from src.data.kpi_catalog import AREE, CALCOLATORI_KPI
+from src.data.kpi_catalog import AREE, CALCOLATORI_KPI, VALUTAZIONI
 from src.logic.scoring import kpi_applicabile, is_kpi_da_rendicontare, calcola_score_area
 from src.logic.calcolatori import calcola_kpi
 
@@ -60,7 +60,7 @@ def render_compilazione():
                         current_val = st.session_state.kpi_values.get(kpi["id"], {}).get("valore", "N/V")
                         current_note = st.session_state.kpi_values.get(kpi["id"], {}).get("note", "")
                         current_perc = st.session_state.kpi_values.get(kpi["id"], {}).get("percentuale", "")
-                        opzioni = ["N/V", "No", "Parziale", "Sì"]
+                        opzioni = VALUTAZIONI
                         def on_val_change(kpi_id):
                             st.session_state.kpi_values[kpi_id]["valore"] = st.session_state[f"sel_{kpi_id}"]
                         def on_note_change(kpi_id):

@@ -1,11 +1,11 @@
 # src/logic/scoring.py
-from src.data.kpi_catalog import AREE, KPI_DA_RENDICONTARE_PER_FASCIA
+from src.data.kpi_catalog import AREE, KPI_DA_RENDICONTARE_PER_FASCIA, FATTORE_PARZIALE, FASCE_CON_KPI_DA_RENDICONTARE
 
 def kpi_applicabile(kpi, fascia):
     return fascia in kpi["fasceRichieste"]
 
 def is_kpi_da_rendicontare(kpi_id, fascia):
-    if fascia >= 3:
+    if fascia not in FASCE_CON_KPI_DA_RENDICONTARE:
         return False
     return kpi_id in KPI_DA_RENDICONTARE_PER_FASCIA and fascia in KPI_DA_RENDICONTARE_PER_FASCIA[kpi_id]
 
@@ -23,7 +23,7 @@ def calcola_score_area(area, kpi_values, fascia):
             punti_ottenuti += k["punti"]
             completati += 1
         elif val == "Parziale":
-            punti_ottenuti += k["punti"] * 0.5
+            punti_ottenuti += k["punti"] * FATTORE_PARZIALE
             completati += 1
         elif val == "No":
             completati += 1

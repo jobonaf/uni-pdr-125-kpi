@@ -7,7 +7,15 @@ e il progetto adotta il [Versionamento Semantico](https://semver.org/lang/it/).
 
 ## [Non rilasciato]
 
+### Aggiunto (esportazione catalogo, issue #23)
+
+- `scripts/export_catalog.py` genera `frontend/static/data/kpi-catalog.json` (aree, KPI, cluster, KPI da rendicontare, calcolatori, parametri di scoring); con `--check` verifica che il file sia aggiornato
+- `src/data/export_catalog.py`: costruzione del dizionario JSON, senza dipendenze da Streamlit
+- Test `tests/test_export_catalog.py`: falliscono se `kpi_catalog.py` cambia senza rigenerare il JSON
+
 ### Modificato
+
+- Parametri di scoring centralizzati in `kpi_catalog.py` (`SOGLIA_CERTIFICAZIONE`, `FATTORE_PARZIALE`, `VALUTAZIONI`, `FASCE_CON_KPI_DA_RENDICONTARE`): la soglia del 60% era scritta a mano in quattro file della UI
 
 - Calcolatori KPI (`CALCOLATORI_KPI`) resi **dichiarativi**: formule e soglie sono dati (serializzabili in JSON) invece di funzioni lambda; l'interpretazione è nel nuovo modulo puro `src/logic/calcolatori.py` (prerequisito per #22 e #23)
 - `src/logic/scoring.py` non importa più Streamlit; rimossa la doppia definizione di `init_calculator_state` e la funzione `update_kpi_from_calculator`, ora sostituite da `calcola_kpi()` e dalla callback `applica_calcolatore` in `src/ui/compilazione.py` (issue #21)

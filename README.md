@@ -128,6 +128,16 @@ python -m pytest -q tests
 I test sulla logica (`src/data`, `src/logic`) non richiedono Streamlit; quelli di
 interfaccia (`tests/test_ui_calcolatori.py`) vengono saltati se Streamlit non è installato.
 
+## Catalogo JSON per il frontend statico
+
+Dopo ogni modifica a `src/data/kpi_catalog.py` rigenerare il catalogo e committarlo:
+
+```
+python scripts/export_catalog.py
+```
+
+`python scripts/export_catalog.py --check` verifica che sia aggiornato (lo fa anche la suite di test).
+
 ## Utilizzo
 
 1. Nella scheda **Anagrafica**, inserire il nome dell'organizzazione, selezionare il settore ATECO e la fascia dimensionale (1–4 in base al numero di addetti)

@@ -1,5 +1,6 @@
 # src/data/kpi_catalog.py
 # Dati strutturali: AREE, CLUSTER, KPI_DA_RENDICONTARE_PER_FASCIA, CALCOLATORI_KPI
+# e parametri di scoring (SOGLIA_CERTIFICAZIONE, FATTORE_PARZIALE, VALUTAZIONI)
 
 # =============================================================================
 # DATI STRUTTURALI — UNI/PdR 125:2022
@@ -291,6 +292,13 @@ CLUSTER = [
     {"id": 3, "nome": "Media", "range": "50–249 addetti", "emoji": "🔶"},
     {"id": 4, "nome": "Grande", "range": "≥ 250 addetti", "emoji": "🟠"},
 ]
+
+# Parametri di scoring (UNI/PdR 125:2022, §5.1). Unica fonte di verità: li usano
+# sia l'app Streamlit sia l'esportazione JSON per il frontend statico.
+SOGLIA_CERTIFICAZIONE = 60      # score globale minimo (%) per la certificazione
+FATTORE_PARZIALE = 0.5          # frazione dei punti assegnata a una valutazione "Parziale"
+VALUTAZIONI = ["N/V", "No", "Parziale", "Sì"]   # "N/V" = non valutato (non conta come compilato)
+FASCE_CON_KPI_DA_RENDICONTARE = [1, 2]          # per le fasce 3-4 si applicano tutti gli indicatori
 
 # KPI che le organizzazioni di fascia 1 e 2 devono obbligatoriamente
 # misurare e rendicontare (non necessariamente con esito positivo).
