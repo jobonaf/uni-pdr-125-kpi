@@ -1,10 +1,13 @@
 // frontend/static/js/app.js — interfaccia (DOM). La logica è in scoring.js e stato.js.
 import { calcolaScoreGlobale, calcolaKpiNonCompilati, kpiApplicabile, certificabile } from "./scoring.js";
 import { calcolaKpi } from "./calcolatori.js";
+import { confrontaAnni } from "./confronto.js";
 import { statoIniziale, creaExport, validaImport } from "./stato.js";
 
 const CHIAVE = "uni-pdr-125-kpi:stato";
-const VISTE = { org: "Organizzazione", comp: "Compilazione", dash: "Dashboard", dati: "Salva / carica" };
+const VISTE = { org: "Organizzazione", comp: "Compilazione", dash: "Dashboard", conf: "Confronto", rep: "Report", dati: "Salva / carica" };
+let annoRif = null;
+const SIMBOLO = { su: ["⬆️", "migliorato"], giu: ["⬇️", "peggiorato"], uguale: ["➡️", "invariato"], nd: ["—", "non confrontabile"] };
 let catalogo, stato, vista = "org", messaggio = null;
 
 const el = (tag, attrs = {}, ...figli) => {
@@ -97,6 +100,8 @@ function vistaComp() {
             el("select", { id: `v-${k.id}`, class: "form-select w-auto mt-2",
               onchange: (e) => { v.valore = e.target.value; salva(); } },
               catalogo.scoring.valutazioni.map((o) => el("option", { value: o, selected: o === v.valore }, o))),
+            el("textarea", { class: "form-control mt-2", rows: "2", placeholder: "Note / evidenze", "aria-label": `Note: ${k.testo}`,
+              oninput: (e) => { v.note = e.target.value; salva(); } }, v.note),
             calcolatore(k, v),
             el("details", { class: "mt-2" }, el("summary", { class: "small" }, "Descrizione estesa"), el("p", {}, k.descrizione)));
         }));
@@ -118,6 +123,74 @@ function vistaDash() {
       el("div", { class: "barra", role: "img", "aria-label": `${a.nome} ${a.score.toFixed(0)}%` },
         el("span", { style: `width:${a.score}%;background:${a.colore}` })))),
     el("button", { class: "btn btn-outline-primary no-print", type: "button", onclick: () => window.print() }, "Stampa"));
+}
+
+const tabella = (intest, righe) => el("div", { class: "table-responsive" }, el("table", { class: "table table-sm" },
+  el("thead", {}, el("tr", {}, intest.map((t) => el("th", { scope: "col" }, t)))),
+  el("tbody", {}, righe.map((r) => el("tr", {}, r.map((c) => el("td", {}, c)))))));
+const pp = (x) => `${x >= 0 ? "+" : ""}${x.toFixed(1)} pp`;
+
+function vistaRep() {
+  const a = stato.azienda, fascia = a.fascia, cl = catalogo.cluster.find((c) => c.id === fascia);
+  const { scoreGlobale, areeDetails } = calcolaScoreGlobale(catalogo, stato.kpi_values, fascia);
+  const soglia = catalogo.scoring.sogliaCertificazione;
+  return el("section", {},
+    el("h1", { class: "h3" }, "Report di autovalutazione UNI/PdR 125:2022"),
+    el("p", {}, `${a.nome || "—"} · ${a.settore || "—"} · anno ${a.anno} · fascia ${fascia} (${cl.nome}, ${cl.range})`),
+    el("p", { class: "fw-bold" }, `Score globale: ${scoreGlobale.toFixed(1)}% — soglia del ${soglia}% ${certificabile(catalogo, scoreGlobale) ? "raggiunta" : "non raggiunta"}`),
+    areeDetails.filter((x) => x.totale > 0).map((area) => el("div", { class: "mb-4" },
+      el("h2", { class: "h5" }, `${area.icona} ${area.nome} — ${area.score.toFixed(1)}% (${area.completati}/${area.totale} KPI compilati)`),
+      tabella(["KPI", "Valutazione", "Valore", "Note"], area.kpi.filter((k) => kpiApplicabile(k, fascia)).map((k) => {
+        const v = stato.kpi_values[k.id]; return [k.testo, v.valore, v.percentuale || "—", v.note || ""];
+      })))),
+    el("p", { class: "small text-muted" }, `Generato il ${new Date().toLocaleDateString("it-IT")}. Autovalutazione: non sostituisce la certificazione rilasciata da un organismo accreditato.`),
+    el("button", { class: "btn btn-primary no-print", type: "button", onclick: () => window.print() }, "Stampa / salva PDF"));
+}
+
+function vistaConf() {
+  const corr = { azienda: stato.azienda, kpi_values: stato.kpi_values }, sto = stato.storico;
+  const salvaAnno = () => {
+    const anno = stato.azienda.anno;
+    if (sto.some((e) => e.azienda.anno === anno)) messaggio = { tipo: "warning", testo: `L'anno ${anno} è già presente nello storico.` };
+    else {
+      sto.push(structuredClone({ azienda: stato.azienda, kpi_values: stato.kpi_values }));
+      sto.sort((x, y) => x.azienda.anno - y.azienda.anno); salva();
+      messaggio = { tipo: "success", testo: `Anno ${anno} salvato nello storico.` };
+    }
+    render();
+  };
+  const testa = [el("h1", { class: "h3" }, "Confronto annualità"),
+    messaggio ? el("div", { class: `alert alert-${messaggio.tipo}`, role: "status" }, messaggio.testo) : null,
+    el("button", { class: "btn btn-primary mb-3 no-print", type: "button", onclick: salvaAnno }, `Salva l'anno ${stato.azienda.anno} nello storico`)];
+  if (!sto.length) return el("section", {}, testa, el("p", {}, "Nessuna annualità salvata: salva l'anno corrente per attivare il confronto."));
+  const rif = sto.find((e) => e.azienda.anno === annoRif) ?? sto[sto.length - 1];
+  const r = confrontaAnni(catalogo, corr, rif);
+  const score = (e) => calcolaScoreGlobale(catalogo, e.kpi_values, e.azienda.fascia).scoreGlobale;
+  const serie = [...sto.map((e) => ({ anno: `${e.azienda.anno}`, s: score(e) })), { anno: `${stato.azienda.anno} (corrente)`, s: r.scoreCorrente }]
+    .sort((x, y) => parseInt(x.anno) - parseInt(y.anno));
+  return el("section", {}, testa,
+    el("label", { for: "rif", class: "form-label" }, "Anno di riferimento"),
+    el("select", { id: "rif", class: "form-select w-auto mb-3", onchange: (e) => { annoRif = Number(e.target.value); render(); } },
+      sto.map((e) => el("option", { value: e.azienda.anno, selected: e === rif }, e.azienda.anno))),
+    el("p", { class: "fw-bold" }, `${rif.azienda.anno}: ${r.scoreRiferimento.toFixed(1)}% → anno corrente: ${r.scoreCorrente.toFixed(1)}% (${pp(r.delta)})`),
+    el("h2", { class: "h5" }, "Andamento dello score globale"),
+    serie.map((x) => el("div", { class: "mb-2" }, `${x.anno}: ${x.s.toFixed(1)}%`,
+      el("div", { class: "barra", role: "img", "aria-label": `${x.anno} ${x.s.toFixed(0)}%` }, el("span", { style: `width:${x.s}%;background:#06c` })))),
+    el("h2", { class: "h5 mt-4" }, "Per area"),
+    tabella(["Area", String(rif.azienda.anno), "Corrente", "Δ"], r.aree.map((a) => [a.nome, `${a.riferimento.toFixed(1)}%`, `${a.corrente.toFixed(1)}%`, pp(a.delta)])),
+    el("h2", { class: "h5 mt-4" }, "Per KPI"),
+    tabella(["Area", "KPI", String(rif.azienda.anno), "Corrente", "Variazione"], r.kpi.map((k) => {
+      const [sim, desc] = SIMBOLO[k.variazione];
+      return [k.area, k.testo, k.riferimento, k.corrente, el("span", { role: "img", "aria-label": desc }, sim)];
+    })),
+    el("h2", { class: "h5 mt-4" }, "Storico salvato"),
+    [...sto].reverse().map((e) => el("div", { class: "d-flex align-items-center gap-2 mb-2" },
+      el("span", { class: "me-auto" }, `${e.azienda.anno} — ${e.azienda.nome || "—"} — ${score(e).toFixed(1)}%`),
+      el("button", { class: "btn btn-sm btn-outline-primary", type: "button", onclick: () => {
+        stato.azienda = structuredClone(e.azienda); stato.kpi_values = structuredClone(e.kpi_values); stato.calc_data = {};
+        salva(); messaggio = { tipo: "success", testo: `Anno ${e.azienda.anno} caricato come annualità corrente.` }; render(); } }, "Carica"),
+      el("button", { class: "btn btn-sm btn-outline-danger", type: "button", onclick: () => {
+        if (confirm(`Eliminare ${e.azienda.anno} dallo storico?`)) { stato.storico = stato.storico.filter((x) => x !== e); salva(); render(); } } }, "Elimina"))));
 }
 
 function vistaDati() {
@@ -146,7 +219,7 @@ function vistaDati() {
 
 function render() {
   renderTabs();
-  document.getElementById("main").replaceChildren({ org: vistaOrg, comp: vistaComp, dash: vistaDash, dati: vistaDati }[vista]());
+  document.getElementById("main").replaceChildren({ org: vistaOrg, comp: vistaComp, dash: vistaDash, conf: vistaConf, rep: vistaRep, dati: vistaDati }[vista]());
 }
 
 try {

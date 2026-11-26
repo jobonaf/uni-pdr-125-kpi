@@ -7,6 +7,14 @@ e il progetto adotta il [Versionamento Semantico](https://semver.org/lang/it/).
 
 ## [Non rilasciato]
 
+### Aggiunto (report e confronto tra anni nel frontend, issue #24)
+
+- Pagina **Report** stampabile (A4, stili di stampa dedicati): intestazione, score globale, tabella dei KPI per area con valutazione, valore e note; "Stampa / salva PDF"
+- Campo **Note** per ogni KPI nella Compilazione (incluso nel report e nell'export)
+- Pagina **Confronto**: salvataggio dell'anno nello storico, score a confronto con un anno di riferimento, andamento, tabella per area e per KPI (⬆️ ⬇️ ➡️), caricamento ed eliminazione di annualità
+- Lo storico è salvato nel browser e nell'export come chiave opzionale `storico` (ignorata da Streamlit, i cui file si importano ancora); l'import scarta voci non valide o con anno duplicato, con avviso
+- `static/js/confronto.js` (`confrontaAnni`, `variazioneKpi`) con test e riga in `docs/logica-calcolo.md`
+
 ### Aggiunto (calcolatori nel frontend, issue #15)
 
 - Calcolatore nella pagina Compilazione per i KPI quantitativi che ne hanno uno nel catalogo (oc1, oc3, oc5, r1, ge4, ge5): inserisce gli input, calcola con `calcolaKpi`, imposta valutazione e valore percentuale

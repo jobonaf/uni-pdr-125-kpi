@@ -6,7 +6,7 @@ import { catalogo } from "./helpers.js";
 test("export: stesse chiavi del formato 2.0 di Streamlit", () => {
   const s = statoIniziale(catalogo, 2026);
   const e = creaExport(catalogo, s, new Date("2026-01-01T00:00:00Z"));
-  assert.deepEqual(Object.keys(e), ["version", "compilazione_parziale", "kpi_compilati", "kpi_totali", "azienda", "kpi_values", "calc_data", "esportato"]);
+  assert.deepEqual(Object.keys(e), ["version", "compilazione_parziale", "kpi_compilati", "kpi_totali", "azienda", "kpi_values", "calc_data", "storico", "esportato"]);
   assert.equal(e.version, "2.0");
   assert.equal(e.kpi_compilati, 0);
   assert.equal(e.compilazione_parziale, true);

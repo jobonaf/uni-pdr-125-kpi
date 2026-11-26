@@ -7,8 +7,8 @@ python -m http.server -d frontend 8000   # poi aprire http://localhost:8000
 cd frontend && node --test               # test della logica JavaScript
 ```
 
-- `index.html` + `static/js/app.js`: interfaccia (Organizzazione, Compilazione, Dashboard, Salva/carica)
-- `static/js/scoring.js`, `calcolatori.js`, `stato.js`: logica pura, testata contro il Python
+- `index.html` + `static/js/app.js`: interfaccia (Organizzazione, Compilazione, Dashboard, Confronto, Report, Salva/carica)
+- `static/js/scoring.js`, `calcolatori.js`, `stato.js`, `confronto.js`: logica pura, testata contro il Python
 - `static/data/kpi-catalog.json`: generato da `python scripts/export_catalog.py`
 - `static/vendor/bootstrap-italia/`: Bootstrap Italia 2.18.3 incluso nel repository (solo CSS, icone, font Titillium Web) per funzionare anche dietro proxy o offline
 
@@ -17,4 +17,6 @@ l'import viene validato: fascia 1–4, id dei KPI noti e valori ammessi; i KPI s
 
 Calcolatori: disponibili per i 6 KPI quantitativi che li definiscono nel catalogo (oc1, oc3, oc5, r1, ge4, ge5).
 
-Non ancora presenti: report stampabile dedicato, storico e confronto tra anni.
+Report e confronto tra anni sono disponibili; lo storico è una funzione in più del frontend (Streamlit non lo salva nel file).
+
+Non ancora presenti: grafici interattivi e i calcolatori mancanti nel catalogo.

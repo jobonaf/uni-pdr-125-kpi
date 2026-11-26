@@ -1,4 +1,9 @@
-@media print { nav, .no-print { display: none !important; } }
+@page { margin: 15mm; }
+@media print {
+  nav, .no-print { display: none !important; }
+  .barra, .barra > span { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  table, h2 { break-inside: avoid; }
+}
 .fascia-card { cursor: pointer; }
 .fascia-card.selected { border: 2px solid var(--bs-primary, #06c); }
 .kpi { border-bottom: 1px solid #ddd; padding: 1rem 0; }
