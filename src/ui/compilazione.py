@@ -1,8 +1,30 @@
 # src/ui/compilazione.py
 import streamlit as st
-from src.data.kpi_catalog import AREE, CALCOLATORI_KPI
+from src.data.kpi_catalog import AREE, CALCOLATORI_KPI, VALUTAZIONI
 from src.logic.scoring import kpi_applicabile, is_kpi_da_rendicontare, calcola_score_area
-from src.logic.scoring import init_calculator_state, update_kpi_from_calculator
+from src.logic.calcolatori import calcola_kpi
+from src.logic.catalogo import nota_equivalente
+
+def applica_calcolatore(kpi_id):
+    """Callback del pulsante del calcolatore.
+
+    Va usata come on_click: Streamlit esegue le callback PRIMA di istanziare i
+    widget, quindi è l'unico punto in cui è lecito modificare st.session_state
+    per le chiavi dei widget (sel_*, perc_*).
+    """
+    calc_data = st.session_state.get(f"calc_{kpi_id}", {})
+    risultato = calcola_kpi(kpi_id, calc_data)
+    if risultato is None:
+        return
+    valore_calcolato, valutazione = risultato
+    st.session_state[f"sel_{kpi_id}"] = valutazione
+    st.session_state[f"perc_{kpi_id}"] = f"{valore_calcolato:.1f}"
+    st.session_state.kpi_values[kpi_id] = {
+        "valore": valutazione,
+        "note": st.session_state.kpi_values.get(kpi_id, {}).get("note", ""),
+        "percentuale": f"{valore_calcolato:.1f}",
+    }
+
 
 def render_compilazione():
     st.markdown("## ✏️ Compilazione KPI")
@@ -31,6 +53,9 @@ def render_compilazione():
                             badge_text += " | 📋 DA RENDICONTARE"
                         st.markdown(f"**{kpi['testo']}**")
                         st.caption(badge_text)
+                        nota = nota_equivalente(kpi)
+                        if nota:
+                            st.caption(f"ℹ️ {nota}")
                         if kpi.get("soglia"):
                             st.caption(f"*Soglia: {kpi['soglia']}*")
                         with st.expander("📖 Descrizione estesa"):
@@ -39,7 +64,7 @@ def render_compilazione():
                         current_val = st.session_state.kpi_values.get(kpi["id"], {}).get("valore", "N/V")
                         current_note = st.session_state.kpi_values.get(kpi["id"], {}).get("note", "")
                         current_perc = st.session_state.kpi_values.get(kpi["id"], {}).get("percentuale", "")
-                        opzioni = ["N/V", "No", "Parziale", "Sì"]
+                        opzioni = VALUTAZIONI
                         def on_val_change(kpi_id):
                             st.session_state.kpi_values[kpi_id]["valore"] = st.session_state[f"sel_{kpi_id}"]
                         def on_note_change(kpi_id):
@@ -89,22 +114,10 @@ def render_compilazione():
                                                 step=1, min_value=min_val, max_value=max_val
                                             )
                                         st.session_state.setdefault(f"calc_{kpi['id']}", {})[inp["name"]] = st.session_state[key]
-                                    if st.button(f"Calcola e imposta valutazione", key=f"btn_calc_{kpi['id']}"):
-                                        # Aggiorna kpi_values in base ai valori del calcolatore
-                                        calc_data = st.session_state.get(f"calc_{kpi['id']}", {})
-                                        if calc_data:
-                                            inputs = {inp["name"]: calc_data.get(inp["name"]) for inp in config["inputs"]}
-                                            if all(v is not None for v in inputs.values()):
-                                                valore_calcolato = config["formula"](inputs)
-                                                valutazione = config["valutazione"](valore_calcolato)
-                                                st.session_state[f"sel_{kpi['id']}"] = valutazione
-                                                st.session_state[f"perc_{kpi['id']}"] = f"{valore_calcolato:.1f}"
-                                                st.session_state.kpi_values[kpi["id"]] = {
-                                                    "valore": valutazione,
-                                                    "note": st.session_state.kpi_values.get(kpi["id"], {}).get("note", ""),
-                                                    "percentuale": f"{valore_calcolato:.1f}"
-                                                }
-                                                st.rerun()
+                                    st.button(
+                                        "Calcola e imposta valutazione", key=f"btn_calc_{kpi['id']}",
+                                        on_click=applica_calcolatore, args=(kpi["id"],)
+                                    )
                         # Inizializza i widget principali
                         if f"sel_{kpi['id']}" not in st.session_state:
                             st.session_state[f"sel_{kpi['id']}"] = current_val

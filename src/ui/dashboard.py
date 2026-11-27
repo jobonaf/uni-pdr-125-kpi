@@ -4,7 +4,7 @@ import pandas as pd
 import plotly.graph_objects as go
 import plotly.express as px
 from src.logic.scoring import calcola_score_globale, calcola_kpi_non_compilati, kpi_applicabile
-from src.data.kpi_catalog import AREE
+from src.data.kpi_catalog import AREE, SOGLIA_CERTIFICAZIONE
 
 def render_dashboard():
     st.markdown("## 📊 Dashboard")
@@ -15,17 +15,17 @@ def render_dashboard():
     col1, col2, col3 = st.columns([2, 1, 1])
     with col1:
         st.markdown(f"### Score Globale: **{score_globale:.1f}%**")
-        if score_globale >= 60:
+        if score_globale >= SOGLIA_CERTIFICAZIONE:
             st.success("✅ Soglia di certificazione raggiunta")
         else:
-            st.warning(f"⚠️ Mancano {60 - score_globale:.1f} punti percentuali alla certificazione")
+            st.warning(f"⚠️ Mancano {SOGLIA_CERTIFICAZIONE - score_globale:.1f} punti percentuali alla certificazione")
     kpi_non_compilati = calcola_kpi_non_compilati(st.session_state.kpi_values, fascia)
     if kpi_non_compilati:
         with st.expander("📋 Indicatori da rendicontare non ancora compilati", expanded=True):
             st.warning(
                 f"**{len(kpi_non_compilati)} indicatori chiave di prestazione (KPI) non ancora compilati** — "
                 f"compilali per ottenere uno score accurato. "
-                f"La certificazione dipende dal punteggio complessivo (soglia: 60%), "
+                f"La certificazione dipende dal punteggio complessivo (soglia: {SOGLIA_CERTIFICAZIONE}%), "
                 f"non dall'esito di singoli indicatori."
             )
             for m in kpi_non_compilati:

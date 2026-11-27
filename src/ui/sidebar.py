@@ -1,7 +1,7 @@
 # src/ui/sidebar.py
 import streamlit as st
 from src.logic.scoring import calcola_score_globale, calcola_score_area
-from src.data.kpi_catalog import AREE
+from src.data.kpi_catalog import AREE, SOGLIA_CERTIFICAZIONE
 
 def render_sidebar(azienda, kpi_values):
     with st.sidebar:
@@ -16,7 +16,7 @@ def render_sidebar(azienda, kpi_values):
         score = score_data["score_globale"]
         col1, col2 = st.columns(2)
         col1.metric("Score", f"{score:.1f}%")
-        if score >= 60:
+        if score >= SOGLIA_CERTIFICAZIONE:
             col2.markdown("✅ **CERTIFICABILE**")
         elif score >= 40:
             col2.markdown("⚠️ **IN PROGRESS**")

@@ -1,5 +1,6 @@
 # src/data/kpi_catalog.py
 # Dati strutturali: AREE, CLUSTER, KPI_DA_RENDICONTARE_PER_FASCIA, CALCOLATORI_KPI
+# e parametri di scoring (SOGLIA_CERTIFICAZIONE, FATTORE_PARZIALE, VALUTAZIONI)
 
 # =============================================================================
 # DATI STRUTTURALI — UNI/PdR 125:2022
@@ -153,11 +154,20 @@ AREE = [
         "icona": "📈",
         "descrizione": "Misura l'effettivo accesso neutrale rispetto al genere ai percorsi di carriera e di crescita professionale.",
         "kpi": [
+            # NB: oc1/oc2 e oc3/oc4 sono coppie MUTUAMENTE ESCLUSIVE: stessa metrica,
+            # benchmark diverso a seconda della fascia (biennio precedente per le
+            # fasce 1-2, media ATECO di settore per le fasce 3-4). Le `fasceRichieste`
+            # delle due KPI di ciascuna coppia NON devono mai sovrapporsi, altrimenti
+            # lo score conta due volte la stessa metrica (verificato da tests/test_catalogo.py).
+            # Il campo `equivalente` indica l'altro KPI della coppia ed è usato dall'interfaccia
+            # per spiegare all'utente perché in un'area compaiono indicatori quasi identici.
+            # Cfr. UNI/PdR 125:2022, Prospetto 6.
             {
                 "id": "oc1", "punti": 25, "tipo": "quantitativo",
                 "testo": "% donne sull'organico totale — fascia 1-2 (confronto biennale)",
                 "descrizione": "La percentuale di donne sull'organico totale deve crescere di almeno +10 punti percentuali rispetto al biennio precedente.",
                 "fasceRichieste": [1, 2],
+                "equivalente": "oc2",
                 "soglia": "+10pp vs biennio precedente → parità"
             },
             {
@@ -165,6 +175,7 @@ AREE = [
                 "testo": "% donne sull'organico totale vs benchmark industry — fascia 3-4",
                 "descrizione": "La percentuale di donne sull'organico deve essere almeno +10 punti percentuali superiore alla media del settore di appartenenza.",
                 "fasceRichieste": [3, 4],
+                "equivalente": "oc1",
                 "soglia": "+10pp vs media ATECO industry"
             },
             {
@@ -172,6 +183,7 @@ AREE = [
                 "testo": "% donne dirigenti — fascia 2 (confronto biennale)",
                 "descrizione": "La percentuale di donne con qualifica dirigenziale deve crescere di almeno +10 punti percentuali rispetto al biennio precedente.",
                 "fasceRichieste": [2],
+                "equivalente": "oc4",
                 "soglia": "+10pp vs biennio precedente"
             },
             {
@@ -179,6 +191,7 @@ AREE = [
                 "testo": "% donne dirigenti vs benchmark industry — fascia 3-4",
                 "descrizione": "La percentuale di donne con qualifica di dirigente deve essere almeno +10pp superiore alla media dell'industry.",
                 "fasceRichieste": [3, 4],
+                "equivalente": "oc3",
                 "soglia": "+10pp vs media ATECO industry"
             },
             {
@@ -286,6 +299,13 @@ CLUSTER = [
     {"id": 4, "nome": "Grande", "range": "≥ 250 addetti", "emoji": "🟠"},
 ]
 
+# Parametri di scoring (UNI/PdR 125:2022, §5.1). Unica fonte di verità: li usano
+# sia l'app Streamlit sia l'esportazione JSON per il frontend statico.
+SOGLIA_CERTIFICAZIONE = 60      # score globale minimo (%) per la certificazione
+FATTORE_PARZIALE = 0.5          # frazione dei punti assegnata a una valutazione "Parziale"
+VALUTAZIONI = ["N/V", "No", "Parziale", "Sì"]   # "N/V" = non valutato (non conta come compilato)
+FASCE_CON_KPI_DA_RENDICONTARE = [1, 2]          # per le fasce 3-4 si applicano tutti gli indicatori
+
 # KPI che le organizzazioni di fascia 1 e 2 devono obbligatoriamente
 # misurare e rendicontare (non necessariamente con esito positivo).
 # Fonte: UNI/PdR 125:2022, Prospetti 3-8, clausole "è considerato necessario".
@@ -324,6 +344,19 @@ KPI_DA_RENDICONTARE_PER_FASCIA = {
 # CALCOLATORI PER KPI QUANTITATIVI
 # =============================================================================
 
+# Ogni calcolatore è descritto SOLO con dati (nessuna funzione), così il
+# catalogo è serializzabile in JSON e riusabile lato client (JavaScript).
+# L'interpretazione di "formula" e "valutazione" è in src/logic/calcolatori.py.
+#
+# formula.tipo:
+#   "differenza"       -> a - b
+#   "percentuale"      -> parte / totale * 100
+#   "gap_percentuale"  -> (riferimento - confronto) / riferimento * 100
+#                         (0 se riferimento <= 0)
+# valutazione.confronto:
+#   "maggiore_uguale"  -> Sì se v >= soglia_si; Parziale se v >= soglia_parziale; altrimenti No
+#   "minore"           -> Sì se v <  soglia_si; Parziale se v <  soglia_parziale; altrimenti No
+
 CALCOLATORI_KPI = {
     "oc1": {
         "label": "Calcola Δ percentuale donne sull'organico (biennale)",
@@ -331,9 +364,9 @@ CALCOLATORI_KPI = {
             {"name": "perc_donne_corrente", "label": "% donne anno corrente", "type": "float", "min": 0.0, "max": 100.0},
             {"name": "perc_donne_precedente", "label": "% donne biennio precedente", "type": "float", "min": 0.0, "max": 100.0}
         ],
-        "formula": lambda inputs: inputs["perc_donne_corrente"] - inputs["perc_donne_precedente"],
+        "formula": {"tipo": "differenza", "a": "perc_donne_corrente", "b": "perc_donne_precedente"},
         "soglia": 10,
-        "valutazione": lambda val: "Sì" if val >= 10 else "Parziale" if val >= 5 else "No"
+        "valutazione": {"confronto": "maggiore_uguale", "soglia_si": 10, "soglia_parziale": 5}
     },
     "oc3": {
         "label": "Calcola Δ percentuale donne dirigenti (biennale)",
@@ -341,9 +374,9 @@ CALCOLATORI_KPI = {
             {"name": "perc_dir_corrente", "label": "% donne dirigenti anno corrente", "type": "float", "min": 0.0, "max": 100.0},
             {"name": "perc_dir_precedente", "label": "% donne dirigenti biennio precedente", "type": "float", "min": 0.0, "max": 100.0}
         ],
-        "formula": lambda inputs: inputs["perc_dir_corrente"] - inputs["perc_dir_precedente"],
+        "formula": {"tipo": "differenza", "a": "perc_dir_corrente", "b": "perc_dir_precedente"},
         "soglia": 10,
-        "valutazione": lambda val: "Sì" if val >= 10 else "Parziale" if val >= 5 else "No"
+        "valutazione": {"confronto": "maggiore_uguale", "soglia_si": 10, "soglia_parziale": 5}
     },
     "oc5": {
         "label": "Calcola % donne responsabili di unità organizzative",
@@ -351,9 +384,9 @@ CALCOLATORI_KPI = {
             {"name": "donne_responsabili", "label": "Numero donne responsabili", "type": "int", "min": 0},
             {"name": "totale_responsabili", "label": "Numero totale responsabili", "type": "int", "min": 1}
         ],
-        "formula": lambda inputs: (inputs["donne_responsabili"] / inputs["totale_responsabili"]) * 100,
+        "formula": {"tipo": "percentuale", "parte": "donne_responsabili", "totale": "totale_responsabili"},
         "soglia": 40,
-        "valutazione": lambda val: "Sì" if val >= 40 else "Parziale" if val >= 30 else "No"
+        "valutazione": {"confronto": "maggiore_uguale", "soglia_si": 40, "soglia_parziale": 30}
     },
     "r1": {
         "label": "Calcola gap retributivo per stesso livello/mansione",
@@ -361,9 +394,9 @@ CALCOLATORI_KPI = {
             {"name": "retr_uomini", "label": "Retribuzione media annua lorda uomini (€)", "type": "float", "min": 0.0},
             {"name": "retr_donne", "label": "Retribuzione media annua lorda donne (€)", "type": "float", "min": 0.0}
         ],
-        "formula": lambda inputs: (inputs["retr_uomini"] - inputs["retr_donne"]) / inputs["retr_uomini"] * 100 if inputs["retr_uomini"] > 0 else 0,
+        "formula": {"tipo": "gap_percentuale", "riferimento": "retr_uomini", "confronto": "retr_donne"},
         "soglia": 10,
-        "valutazione": lambda val: "Sì" if val < 10 else "Parziale" if val < 15 else "No"
+        "valutazione": {"confronto": "minore", "soglia_si": 10, "soglia_parziale": 15}
     },
     "ge4": {
         "label": "Calcola tasso di fruizione congedi di paternità obbligatori",
@@ -371,9 +404,9 @@ CALCOLATORI_KPI = {
             {"name": "padri_fruitori", "label": "Numero padri che hanno fruito del congedo", "type": "int", "min": 0},
             {"name": "padri_potenziali", "label": "Numero totale padri potenziali", "type": "int", "min": 1}
         ],
-        "formula": lambda inputs: (inputs["padri_fruitori"] / inputs["padri_potenziali"]) * 100,
+        "formula": {"tipo": "percentuale", "parte": "padri_fruitori", "totale": "padri_potenziali"},
         "soglia": 100,
-        "valutazione": lambda val: "Sì" if val >= 100 else "Parziale" if val >= 80 else "No"
+        "valutazione": {"confronto": "maggiore_uguale", "soglia_si": 100, "soglia_parziale": 80}
     },
     "ge5": {
         "label": "Calcola tasso di fruizione giorni di congedo di paternità",
@@ -381,8 +414,8 @@ CALCOLATORI_KPI = {
             {"name": "giorni_fruiti", "label": "Giorni medi fruiti per padre", "type": "float", "min": 0.0},
             {"name": "giorni_legge", "label": "Giorni previsti dalla legge", "type": "float", "min": 1.0}
         ],
-        "formula": lambda inputs: (inputs["giorni_fruiti"] / inputs["giorni_legge"]) * 100,
+        "formula": {"tipo": "percentuale", "parte": "giorni_fruiti", "totale": "giorni_legge"},
         "soglia": 100,
-        "valutazione": lambda val: "Sì" if val >= 100 else "Parziale" if val >= 80 else "No"
+        "valutazione": {"confronto": "maggiore_uguale", "soglia_si": 100, "soglia_parziale": 80}
     },
 }

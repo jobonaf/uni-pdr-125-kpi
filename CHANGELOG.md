@@ -7,6 +7,79 @@ e il progetto adotta il [Versionamento Semantico](https://semver.org/lang/it/).
 
 ## [Non rilasciato]
 
+### Aggiunto (deploy su GitHub Pages, issue #20)
+
+- Workflow `.github/workflows/ci.yml`: test Python e JavaScript, controllo del catalogo JSON e, solo da `main`, pubblicazione di `index.html` e `static/` su GitHub Pages
+- Test sulle risorse del frontend (`tests/test_frontend_assets.py`): font, file referenziati dall'HTML, percorsi relativi, workflow
+
+### Corretto
+
+- I font Titillium Web erano nel repository ma non collegati: Bootstrap Italia non dichiara gli `@font-face`, ora sono in `frontend/static/css/app.css` e il sito usa il font senza CDN
+
+### Aggiunto (report e confronto tra anni nel frontend, issue #24)
+
+- Pagina **Report** stampabile (A4, stili di stampa dedicati): intestazione, score globale, tabella dei KPI per area con valutazione, valore e note; "Stampa / salva PDF"
+- Campo **Note** per ogni KPI nella Compilazione (incluso nel report e nell'export)
+- Pagina **Confronto**: salvataggio dell'anno nello storico, score a confronto con un anno di riferimento, andamento, tabella per area e per KPI (⬆️ ⬇️ ➡️), caricamento ed eliminazione di annualità
+- Lo storico è salvato nel browser e nell'export come chiave opzionale `storico` (ignorata da Streamlit, i cui file si importano ancora); l'import scarta voci non valide o con anno duplicato, con avviso
+- `static/js/confronto.js` (`confrontaAnni`, `variazioneKpi`) con test e riga in `docs/logica-calcolo.md`
+
+### Aggiunto (calcolatori nel frontend, issue #15)
+
+- Calcolatore nella pagina Compilazione per i KPI quantitativi che ne hanno uno nel catalogo (oc1, oc3, oc5, r1, ge4, ge5): inserisce gli input, calcola con `calcolaKpi`, imposta valutazione e valore percentuale
+- Gli input dei calcolatori vengono salvati nel browser e nell'export (`calc_data`, come in Streamlit); all'import vengono filtrati (calcolatori noti, solo valori numerici) e coperti da test
+
+### Aggiunto (frontend statico, prima versione, issue #24)
+
+- `frontend/index.html` e `static/js/app.js`: pagine Organizzazione (fascia con card), Compilazione KPI per area, Dashboard (score globale, soglia, barre per area, stampa) e Salva/carica; dati nel `localStorage`
+- `static/js/stato.js`: export compatibile con il JSON versione 2.0 di Streamlit e **validazione dell'import** (fascia, id e valori dei KPI)
+- Bootstrap Italia 2.18.3 incluso in `frontend/static/vendor/` (CSS, icone, font), senza dipendere da CDN
+- Non ancora presenti: calcolatori dei KPI quantitativi, report dedicato, storico e confronto
+
+### Aggiunto (documentazione della logica e note sui KPI equivalenti, issue #21 e #14)
+
+- `docs/logica-calcolo.md`: input/output di ogni funzione critica, perimetro della logica "pura", stato della validazione, tre diagrammi di flusso (Mermaid), esempio numerico e tabella di equivalenza Python ↔ JavaScript
+- `src/logic/catalogo.py` (`trova_kpi`, `formatta_fasce`, `nota_equivalente`) e campo `equivalente` sui KPI oc1–oc4: l'interfaccia mostra accanto al badge una nota sulle fasce di applicabilità e sull'indicatore equivalente
+- Test: purezza di `src/data` e `src/logic` (niente UI, rete, database, file system), copertura della documentazione (ogni funzione pubblica Python e ogni export JavaScript deve essere documentata), nota visibile nell'interfaccia, coppie di KPI ricavate dai dati
+
+### Aggiunto (logica di scoring in JavaScript, issue #22)
+
+- `frontend/static/js/scoring.js` e `calcolatori.js`: porting dei moduli Python `scoring.py` e `calcolatori.py` (funzioni pure che ricevono il catalogo JSON, nessun accesso al DOM)
+- Test JavaScript con il runner integrato di Node (`cd frontend && node --test`), eseguiti contro fixture condivise con il Python: `tests/fixtures/calcolatori_golden.json` e `tests/fixtures/scoring_golden.json` (124 scenari su 4 fasce, generati da `scripts/export_golden_scoring.py`)
+- `tests/test_scoring_golden.py`: il Python rispetta le stesse fixture
+
+### Modificato (calcolatori)
+
+- `calcola_kpi()` restituisce `None` anche in caso di divisione per zero (prima sollevava `ZeroDivisionError`), come la versione JavaScript
+
+### Aggiunto (esportazione catalogo, issue #23)
+
+- `scripts/export_catalog.py` genera `frontend/static/data/kpi-catalog.json` (aree, KPI, cluster, KPI da rendicontare, calcolatori, parametri di scoring); con `--check` verifica che il file sia aggiornato
+- `src/data/export_catalog.py`: costruzione del dizionario JSON, senza dipendenze da Streamlit
+- Test `tests/test_export_catalog.py`: falliscono se `kpi_catalog.py` cambia senza rigenerare il JSON
+
+### Modificato
+
+- Parametri di scoring centralizzati in `kpi_catalog.py` (`SOGLIA_CERTIFICAZIONE`, `FATTORE_PARZIALE`, `VALUTAZIONI`, `FASCE_CON_KPI_DA_RENDICONTARE`): la soglia del 60% era scritta a mano in quattro file della UI
+
+- Calcolatori KPI (`CALCOLATORI_KPI`) resi **dichiarativi**: formule e soglie sono dati (serializzabili in JSON) invece di funzioni lambda; l'interpretazione è nel nuovo modulo puro `src/logic/calcolatori.py` (prerequisito per #22 e #23)
+- `src/logic/scoring.py` non importa più Streamlit; rimossa la doppia definizione di `init_calculator_state` e la funzione `update_kpi_from_calculator`, ora sostituite da `calcola_kpi()` e dalla callback `applica_calcolatore` in `src/ui/compilazione.py` (issue #21)
+- Commento inline sulle coppie KPI mutuamente esclusive oc1/oc2 e oc3/oc4 (issue #14)
+
+### Corretto
+
+- Il pulsante "Calcola e imposta valutazione" sollevava `StreamlitAPIException` (modifica di un widget già istanziato): ora usa una callback `on_click`
+- README: comando di avvio su Windows puntava a `src/app.py` anziché a `streamlit_app.py`
+
+### Aggiunto
+
+- Test di equivalenza dei calcolatori con fixture generate dalle funzioni originali (`tests/fixtures/calcolatori_golden.json`), test di serializzabilità JSON, di separazione dei livelli e di integrazione UI (`AppTest`)
+- `.gitignore`
+
+### Rimosso
+
+- `issues/epic-migrazione-bootstrap-italia-github-pages.md`: bozza generica con riferimenti a issue inesistenti; l'epic di riferimento è la #20 su GitHub
+
 ### In corso
 - Migrazione dell'interfaccia da Streamlit a Bootstrap Italia (Design System .italia)
 - Calcolatore inline per i KPI quantitativi

@@ -1,0 +1,5286 @@
+{
+ "oc1": [
+  {
+   "inputs": {
+    "perc_donne_corrente": 0.0,
+    "perc_donne_precedente": 0.0
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 0.0,
+    "perc_donne_precedente": 5.0
+   },
+   "valore": -5.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 0.0,
+    "perc_donne_precedente": 12.5
+   },
+   "valore": -12.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 0.0,
+    "perc_donne_precedente": 25.0
+   },
+   "valore": -25.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 0.0,
+    "perc_donne_precedente": 30.0
+   },
+   "valore": -30.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 0.0,
+    "perc_donne_precedente": 38.5
+   },
+   "valore": -38.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 0.0,
+    "perc_donne_precedente": 40.0
+   },
+   "valore": -40.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 0.0,
+    "perc_donne_precedente": 49.9
+   },
+   "valore": -49.9,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 0.0,
+    "perc_donne_precedente": 50.0
+   },
+   "valore": -50.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 0.0,
+    "perc_donne_precedente": 62.5
+   },
+   "valore": -62.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 0.0,
+    "perc_donne_precedente": 100.0
+   },
+   "valore": -100.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 5.0,
+    "perc_donne_precedente": 0.0
+   },
+   "valore": 5.0,
+   "valutazione": "Parziale"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 5.0,
+    "perc_donne_precedente": 5.0
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 5.0,
+    "perc_donne_precedente": 12.5
+   },
+   "valore": -7.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 5.0,
+    "perc_donne_precedente": 25.0
+   },
+   "valore": -20.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 5.0,
+    "perc_donne_precedente": 30.0
+   },
+   "valore": -25.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 5.0,
+    "perc_donne_precedente": 38.5
+   },
+   "valore": -33.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 5.0,
+    "perc_donne_precedente": 40.0
+   },
+   "valore": -35.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 5.0,
+    "perc_donne_precedente": 49.9
+   },
+   "valore": -44.9,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 5.0,
+    "perc_donne_precedente": 50.0
+   },
+   "valore": -45.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 5.0,
+    "perc_donne_precedente": 62.5
+   },
+   "valore": -57.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 5.0,
+    "perc_donne_precedente": 100.0
+   },
+   "valore": -95.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 12.5,
+    "perc_donne_precedente": 0.0
+   },
+   "valore": 12.5,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 12.5,
+    "perc_donne_precedente": 5.0
+   },
+   "valore": 7.5,
+   "valutazione": "Parziale"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 12.5,
+    "perc_donne_precedente": 12.5
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 12.5,
+    "perc_donne_precedente": 25.0
+   },
+   "valore": -12.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 12.5,
+    "perc_donne_precedente": 30.0
+   },
+   "valore": -17.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 12.5,
+    "perc_donne_precedente": 38.5
+   },
+   "valore": -26.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 12.5,
+    "perc_donne_precedente": 40.0
+   },
+   "valore": -27.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 12.5,
+    "perc_donne_precedente": 49.9
+   },
+   "valore": -37.4,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 12.5,
+    "perc_donne_precedente": 50.0
+   },
+   "valore": -37.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 12.5,
+    "perc_donne_precedente": 62.5
+   },
+   "valore": -50.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 12.5,
+    "perc_donne_precedente": 100.0
+   },
+   "valore": -87.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 25.0,
+    "perc_donne_precedente": 0.0
+   },
+   "valore": 25.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 25.0,
+    "perc_donne_precedente": 5.0
+   },
+   "valore": 20.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 25.0,
+    "perc_donne_precedente": 12.5
+   },
+   "valore": 12.5,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 25.0,
+    "perc_donne_precedente": 25.0
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 25.0,
+    "perc_donne_precedente": 30.0
+   },
+   "valore": -5.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 25.0,
+    "perc_donne_precedente": 38.5
+   },
+   "valore": -13.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 25.0,
+    "perc_donne_precedente": 40.0
+   },
+   "valore": -15.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 25.0,
+    "perc_donne_precedente": 49.9
+   },
+   "valore": -24.9,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 25.0,
+    "perc_donne_precedente": 50.0
+   },
+   "valore": -25.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 25.0,
+    "perc_donne_precedente": 62.5
+   },
+   "valore": -37.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 25.0,
+    "perc_donne_precedente": 100.0
+   },
+   "valore": -75.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 30.0,
+    "perc_donne_precedente": 0.0
+   },
+   "valore": 30.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 30.0,
+    "perc_donne_precedente": 5.0
+   },
+   "valore": 25.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 30.0,
+    "perc_donne_precedente": 12.5
+   },
+   "valore": 17.5,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 30.0,
+    "perc_donne_precedente": 25.0
+   },
+   "valore": 5.0,
+   "valutazione": "Parziale"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 30.0,
+    "perc_donne_precedente": 30.0
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 30.0,
+    "perc_donne_precedente": 38.5
+   },
+   "valore": -8.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 30.0,
+    "perc_donne_precedente": 40.0
+   },
+   "valore": -10.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 30.0,
+    "perc_donne_precedente": 49.9
+   },
+   "valore": -19.9,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 30.0,
+    "perc_donne_precedente": 50.0
+   },
+   "valore": -20.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 30.0,
+    "perc_donne_precedente": 62.5
+   },
+   "valore": -32.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 30.0,
+    "perc_donne_precedente": 100.0
+   },
+   "valore": -70.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 38.5,
+    "perc_donne_precedente": 0.0
+   },
+   "valore": 38.5,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 38.5,
+    "perc_donne_precedente": 5.0
+   },
+   "valore": 33.5,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 38.5,
+    "perc_donne_precedente": 12.5
+   },
+   "valore": 26.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 38.5,
+    "perc_donne_precedente": 25.0
+   },
+   "valore": 13.5,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 38.5,
+    "perc_donne_precedente": 30.0
+   },
+   "valore": 8.5,
+   "valutazione": "Parziale"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 38.5,
+    "perc_donne_precedente": 38.5
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 38.5,
+    "perc_donne_precedente": 40.0
+   },
+   "valore": -1.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 38.5,
+    "perc_donne_precedente": 49.9
+   },
+   "valore": -11.399999999999999,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 38.5,
+    "perc_donne_precedente": 50.0
+   },
+   "valore": -11.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 38.5,
+    "perc_donne_precedente": 62.5
+   },
+   "valore": -24.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 38.5,
+    "perc_donne_precedente": 100.0
+   },
+   "valore": -61.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 40.0,
+    "perc_donne_precedente": 0.0
+   },
+   "valore": 40.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 40.0,
+    "perc_donne_precedente": 5.0
+   },
+   "valore": 35.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 40.0,
+    "perc_donne_precedente": 12.5
+   },
+   "valore": 27.5,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 40.0,
+    "perc_donne_precedente": 25.0
+   },
+   "valore": 15.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 40.0,
+    "perc_donne_precedente": 30.0
+   },
+   "valore": 10.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 40.0,
+    "perc_donne_precedente": 38.5
+   },
+   "valore": 1.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 40.0,
+    "perc_donne_precedente": 40.0
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 40.0,
+    "perc_donne_precedente": 49.9
+   },
+   "valore": -9.899999999999999,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 40.0,
+    "perc_donne_precedente": 50.0
+   },
+   "valore": -10.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 40.0,
+    "perc_donne_precedente": 62.5
+   },
+   "valore": -22.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 40.0,
+    "perc_donne_precedente": 100.0
+   },
+   "valore": -60.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 49.9,
+    "perc_donne_precedente": 0.0
+   },
+   "valore": 49.9,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 49.9,
+    "perc_donne_precedente": 5.0
+   },
+   "valore": 44.9,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 49.9,
+    "perc_donne_precedente": 12.5
+   },
+   "valore": 37.4,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 49.9,
+    "perc_donne_precedente": 25.0
+   },
+   "valore": 24.9,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 49.9,
+    "perc_donne_precedente": 30.0
+   },
+   "valore": 19.9,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 49.9,
+    "perc_donne_precedente": 38.5
+   },
+   "valore": 11.399999999999999,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 49.9,
+    "perc_donne_precedente": 40.0
+   },
+   "valore": 9.899999999999999,
+   "valutazione": "Parziale"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 49.9,
+    "perc_donne_precedente": 49.9
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 49.9,
+    "perc_donne_precedente": 50.0
+   },
+   "valore": -0.10000000000000142,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 49.9,
+    "perc_donne_precedente": 62.5
+   },
+   "valore": -12.600000000000001,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 49.9,
+    "perc_donne_precedente": 100.0
+   },
+   "valore": -50.1,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 50.0,
+    "perc_donne_precedente": 0.0
+   },
+   "valore": 50.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 50.0,
+    "perc_donne_precedente": 5.0
+   },
+   "valore": 45.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 50.0,
+    "perc_donne_precedente": 12.5
+   },
+   "valore": 37.5,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 50.0,
+    "perc_donne_precedente": 25.0
+   },
+   "valore": 25.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 50.0,
+    "perc_donne_precedente": 30.0
+   },
+   "valore": 20.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 50.0,
+    "perc_donne_precedente": 38.5
+   },
+   "valore": 11.5,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 50.0,
+    "perc_donne_precedente": 40.0
+   },
+   "valore": 10.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 50.0,
+    "perc_donne_precedente": 49.9
+   },
+   "valore": 0.10000000000000142,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 50.0,
+    "perc_donne_precedente": 50.0
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 50.0,
+    "perc_donne_precedente": 62.5
+   },
+   "valore": -12.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 50.0,
+    "perc_donne_precedente": 100.0
+   },
+   "valore": -50.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 62.5,
+    "perc_donne_precedente": 0.0
+   },
+   "valore": 62.5,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 62.5,
+    "perc_donne_precedente": 5.0
+   },
+   "valore": 57.5,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 62.5,
+    "perc_donne_precedente": 12.5
+   },
+   "valore": 50.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 62.5,
+    "perc_donne_precedente": 25.0
+   },
+   "valore": 37.5,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 62.5,
+    "perc_donne_precedente": 30.0
+   },
+   "valore": 32.5,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 62.5,
+    "perc_donne_precedente": 38.5
+   },
+   "valore": 24.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 62.5,
+    "perc_donne_precedente": 40.0
+   },
+   "valore": 22.5,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 62.5,
+    "perc_donne_precedente": 49.9
+   },
+   "valore": 12.600000000000001,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 62.5,
+    "perc_donne_precedente": 50.0
+   },
+   "valore": 12.5,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 62.5,
+    "perc_donne_precedente": 62.5
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 62.5,
+    "perc_donne_precedente": 100.0
+   },
+   "valore": -37.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 100.0,
+    "perc_donne_precedente": 0.0
+   },
+   "valore": 100.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 100.0,
+    "perc_donne_precedente": 5.0
+   },
+   "valore": 95.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 100.0,
+    "perc_donne_precedente": 12.5
+   },
+   "valore": 87.5,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 100.0,
+    "perc_donne_precedente": 25.0
+   },
+   "valore": 75.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 100.0,
+    "perc_donne_precedente": 30.0
+   },
+   "valore": 70.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 100.0,
+    "perc_donne_precedente": 38.5
+   },
+   "valore": 61.5,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 100.0,
+    "perc_donne_precedente": 40.0
+   },
+   "valore": 60.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 100.0,
+    "perc_donne_precedente": 49.9
+   },
+   "valore": 50.1,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 100.0,
+    "perc_donne_precedente": 50.0
+   },
+   "valore": 50.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 100.0,
+    "perc_donne_precedente": 62.5
+   },
+   "valore": 37.5,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_donne_corrente": 100.0,
+    "perc_donne_precedente": 100.0
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  }
+ ],
+ "oc3": [
+  {
+   "inputs": {
+    "perc_dir_corrente": 0.0,
+    "perc_dir_precedente": 0.0
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 0.0,
+    "perc_dir_precedente": 5.0
+   },
+   "valore": -5.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 0.0,
+    "perc_dir_precedente": 12.5
+   },
+   "valore": -12.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 0.0,
+    "perc_dir_precedente": 25.0
+   },
+   "valore": -25.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 0.0,
+    "perc_dir_precedente": 30.0
+   },
+   "valore": -30.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 0.0,
+    "perc_dir_precedente": 38.5
+   },
+   "valore": -38.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 0.0,
+    "perc_dir_precedente": 40.0
+   },
+   "valore": -40.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 0.0,
+    "perc_dir_precedente": 49.9
+   },
+   "valore": -49.9,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 0.0,
+    "perc_dir_precedente": 50.0
+   },
+   "valore": -50.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 0.0,
+    "perc_dir_precedente": 62.5
+   },
+   "valore": -62.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 0.0,
+    "perc_dir_precedente": 100.0
+   },
+   "valore": -100.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 5.0,
+    "perc_dir_precedente": 0.0
+   },
+   "valore": 5.0,
+   "valutazione": "Parziale"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 5.0,
+    "perc_dir_precedente": 5.0
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 5.0,
+    "perc_dir_precedente": 12.5
+   },
+   "valore": -7.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 5.0,
+    "perc_dir_precedente": 25.0
+   },
+   "valore": -20.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 5.0,
+    "perc_dir_precedente": 30.0
+   },
+   "valore": -25.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 5.0,
+    "perc_dir_precedente": 38.5
+   },
+   "valore": -33.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 5.0,
+    "perc_dir_precedente": 40.0
+   },
+   "valore": -35.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 5.0,
+    "perc_dir_precedente": 49.9
+   },
+   "valore": -44.9,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 5.0,
+    "perc_dir_precedente": 50.0
+   },
+   "valore": -45.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 5.0,
+    "perc_dir_precedente": 62.5
+   },
+   "valore": -57.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 5.0,
+    "perc_dir_precedente": 100.0
+   },
+   "valore": -95.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 12.5,
+    "perc_dir_precedente": 0.0
+   },
+   "valore": 12.5,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 12.5,
+    "perc_dir_precedente": 5.0
+   },
+   "valore": 7.5,
+   "valutazione": "Parziale"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 12.5,
+    "perc_dir_precedente": 12.5
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 12.5,
+    "perc_dir_precedente": 25.0
+   },
+   "valore": -12.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 12.5,
+    "perc_dir_precedente": 30.0
+   },
+   "valore": -17.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 12.5,
+    "perc_dir_precedente": 38.5
+   },
+   "valore": -26.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 12.5,
+    "perc_dir_precedente": 40.0
+   },
+   "valore": -27.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 12.5,
+    "perc_dir_precedente": 49.9
+   },
+   "valore": -37.4,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 12.5,
+    "perc_dir_precedente": 50.0
+   },
+   "valore": -37.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 12.5,
+    "perc_dir_precedente": 62.5
+   },
+   "valore": -50.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 12.5,
+    "perc_dir_precedente": 100.0
+   },
+   "valore": -87.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 25.0,
+    "perc_dir_precedente": 0.0
+   },
+   "valore": 25.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 25.0,
+    "perc_dir_precedente": 5.0
+   },
+   "valore": 20.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 25.0,
+    "perc_dir_precedente": 12.5
+   },
+   "valore": 12.5,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 25.0,
+    "perc_dir_precedente": 25.0
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 25.0,
+    "perc_dir_precedente": 30.0
+   },
+   "valore": -5.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 25.0,
+    "perc_dir_precedente": 38.5
+   },
+   "valore": -13.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 25.0,
+    "perc_dir_precedente": 40.0
+   },
+   "valore": -15.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 25.0,
+    "perc_dir_precedente": 49.9
+   },
+   "valore": -24.9,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 25.0,
+    "perc_dir_precedente": 50.0
+   },
+   "valore": -25.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 25.0,
+    "perc_dir_precedente": 62.5
+   },
+   "valore": -37.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 25.0,
+    "perc_dir_precedente": 100.0
+   },
+   "valore": -75.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 30.0,
+    "perc_dir_precedente": 0.0
+   },
+   "valore": 30.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 30.0,
+    "perc_dir_precedente": 5.0
+   },
+   "valore": 25.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 30.0,
+    "perc_dir_precedente": 12.5
+   },
+   "valore": 17.5,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 30.0,
+    "perc_dir_precedente": 25.0
+   },
+   "valore": 5.0,
+   "valutazione": "Parziale"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 30.0,
+    "perc_dir_precedente": 30.0
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 30.0,
+    "perc_dir_precedente": 38.5
+   },
+   "valore": -8.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 30.0,
+    "perc_dir_precedente": 40.0
+   },
+   "valore": -10.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 30.0,
+    "perc_dir_precedente": 49.9
+   },
+   "valore": -19.9,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 30.0,
+    "perc_dir_precedente": 50.0
+   },
+   "valore": -20.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 30.0,
+    "perc_dir_precedente": 62.5
+   },
+   "valore": -32.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 30.0,
+    "perc_dir_precedente": 100.0
+   },
+   "valore": -70.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 38.5,
+    "perc_dir_precedente": 0.0
+   },
+   "valore": 38.5,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 38.5,
+    "perc_dir_precedente": 5.0
+   },
+   "valore": 33.5,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 38.5,
+    "perc_dir_precedente": 12.5
+   },
+   "valore": 26.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 38.5,
+    "perc_dir_precedente": 25.0
+   },
+   "valore": 13.5,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 38.5,
+    "perc_dir_precedente": 30.0
+   },
+   "valore": 8.5,
+   "valutazione": "Parziale"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 38.5,
+    "perc_dir_precedente": 38.5
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 38.5,
+    "perc_dir_precedente": 40.0
+   },
+   "valore": -1.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 38.5,
+    "perc_dir_precedente": 49.9
+   },
+   "valore": -11.399999999999999,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 38.5,
+    "perc_dir_precedente": 50.0
+   },
+   "valore": -11.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 38.5,
+    "perc_dir_precedente": 62.5
+   },
+   "valore": -24.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 38.5,
+    "perc_dir_precedente": 100.0
+   },
+   "valore": -61.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 40.0,
+    "perc_dir_precedente": 0.0
+   },
+   "valore": 40.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 40.0,
+    "perc_dir_precedente": 5.0
+   },
+   "valore": 35.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 40.0,
+    "perc_dir_precedente": 12.5
+   },
+   "valore": 27.5,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 40.0,
+    "perc_dir_precedente": 25.0
+   },
+   "valore": 15.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 40.0,
+    "perc_dir_precedente": 30.0
+   },
+   "valore": 10.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 40.0,
+    "perc_dir_precedente": 38.5
+   },
+   "valore": 1.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 40.0,
+    "perc_dir_precedente": 40.0
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 40.0,
+    "perc_dir_precedente": 49.9
+   },
+   "valore": -9.899999999999999,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 40.0,
+    "perc_dir_precedente": 50.0
+   },
+   "valore": -10.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 40.0,
+    "perc_dir_precedente": 62.5
+   },
+   "valore": -22.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 40.0,
+    "perc_dir_precedente": 100.0
+   },
+   "valore": -60.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 49.9,
+    "perc_dir_precedente": 0.0
+   },
+   "valore": 49.9,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 49.9,
+    "perc_dir_precedente": 5.0
+   },
+   "valore": 44.9,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 49.9,
+    "perc_dir_precedente": 12.5
+   },
+   "valore": 37.4,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 49.9,
+    "perc_dir_precedente": 25.0
+   },
+   "valore": 24.9,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 49.9,
+    "perc_dir_precedente": 30.0
+   },
+   "valore": 19.9,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 49.9,
+    "perc_dir_precedente": 38.5
+   },
+   "valore": 11.399999999999999,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 49.9,
+    "perc_dir_precedente": 40.0
+   },
+   "valore": 9.899999999999999,
+   "valutazione": "Parziale"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 49.9,
+    "perc_dir_precedente": 49.9
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 49.9,
+    "perc_dir_precedente": 50.0
+   },
+   "valore": -0.10000000000000142,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 49.9,
+    "perc_dir_precedente": 62.5
+   },
+   "valore": -12.600000000000001,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 49.9,
+    "perc_dir_precedente": 100.0
+   },
+   "valore": -50.1,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 50.0,
+    "perc_dir_precedente": 0.0
+   },
+   "valore": 50.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 50.0,
+    "perc_dir_precedente": 5.0
+   },
+   "valore": 45.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 50.0,
+    "perc_dir_precedente": 12.5
+   },
+   "valore": 37.5,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 50.0,
+    "perc_dir_precedente": 25.0
+   },
+   "valore": 25.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 50.0,
+    "perc_dir_precedente": 30.0
+   },
+   "valore": 20.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 50.0,
+    "perc_dir_precedente": 38.5
+   },
+   "valore": 11.5,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 50.0,
+    "perc_dir_precedente": 40.0
+   },
+   "valore": 10.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 50.0,
+    "perc_dir_precedente": 49.9
+   },
+   "valore": 0.10000000000000142,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 50.0,
+    "perc_dir_precedente": 50.0
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 50.0,
+    "perc_dir_precedente": 62.5
+   },
+   "valore": -12.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 50.0,
+    "perc_dir_precedente": 100.0
+   },
+   "valore": -50.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 62.5,
+    "perc_dir_precedente": 0.0
+   },
+   "valore": 62.5,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 62.5,
+    "perc_dir_precedente": 5.0
+   },
+   "valore": 57.5,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 62.5,
+    "perc_dir_precedente": 12.5
+   },
+   "valore": 50.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 62.5,
+    "perc_dir_precedente": 25.0
+   },
+   "valore": 37.5,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 62.5,
+    "perc_dir_precedente": 30.0
+   },
+   "valore": 32.5,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 62.5,
+    "perc_dir_precedente": 38.5
+   },
+   "valore": 24.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 62.5,
+    "perc_dir_precedente": 40.0
+   },
+   "valore": 22.5,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 62.5,
+    "perc_dir_precedente": 49.9
+   },
+   "valore": 12.600000000000001,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 62.5,
+    "perc_dir_precedente": 50.0
+   },
+   "valore": 12.5,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 62.5,
+    "perc_dir_precedente": 62.5
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 62.5,
+    "perc_dir_precedente": 100.0
+   },
+   "valore": -37.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 100.0,
+    "perc_dir_precedente": 0.0
+   },
+   "valore": 100.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 100.0,
+    "perc_dir_precedente": 5.0
+   },
+   "valore": 95.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 100.0,
+    "perc_dir_precedente": 12.5
+   },
+   "valore": 87.5,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 100.0,
+    "perc_dir_precedente": 25.0
+   },
+   "valore": 75.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 100.0,
+    "perc_dir_precedente": 30.0
+   },
+   "valore": 70.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 100.0,
+    "perc_dir_precedente": 38.5
+   },
+   "valore": 61.5,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 100.0,
+    "perc_dir_precedente": 40.0
+   },
+   "valore": 60.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 100.0,
+    "perc_dir_precedente": 49.9
+   },
+   "valore": 50.1,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 100.0,
+    "perc_dir_precedente": 50.0
+   },
+   "valore": 50.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 100.0,
+    "perc_dir_precedente": 62.5
+   },
+   "valore": 37.5,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "perc_dir_corrente": 100.0,
+    "perc_dir_precedente": 100.0
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  }
+ ],
+ "oc5": [
+  {
+   "inputs": {
+    "donne_responsabili": 0,
+    "totale_responsabili": 1
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 0,
+    "totale_responsabili": 2
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 0,
+    "totale_responsabili": 3
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 0,
+    "totale_responsabili": 5
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 0,
+    "totale_responsabili": 7
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 0,
+    "totale_responsabili": 10
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 0,
+    "totale_responsabili": 25
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 0,
+    "totale_responsabili": 40
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 0,
+    "totale_responsabili": 80
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 0,
+    "totale_responsabili": 100
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 0,
+    "totale_responsabili": 250
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 1,
+    "totale_responsabili": 1
+   },
+   "valore": 100.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 1,
+    "totale_responsabili": 2
+   },
+   "valore": 50.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 1,
+    "totale_responsabili": 3
+   },
+   "valore": 33.33333333333333,
+   "valutazione": "Parziale"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 1,
+    "totale_responsabili": 5
+   },
+   "valore": 20.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 1,
+    "totale_responsabili": 7
+   },
+   "valore": 14.285714285714285,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 1,
+    "totale_responsabili": 10
+   },
+   "valore": 10.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 1,
+    "totale_responsabili": 25
+   },
+   "valore": 4.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 1,
+    "totale_responsabili": 40
+   },
+   "valore": 2.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 1,
+    "totale_responsabili": 80
+   },
+   "valore": 1.25,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 1,
+    "totale_responsabili": 100
+   },
+   "valore": 1.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 1,
+    "totale_responsabili": 250
+   },
+   "valore": 0.4,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 2,
+    "totale_responsabili": 1
+   },
+   "valore": 200.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 2,
+    "totale_responsabili": 2
+   },
+   "valore": 100.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 2,
+    "totale_responsabili": 3
+   },
+   "valore": 66.66666666666666,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 2,
+    "totale_responsabili": 5
+   },
+   "valore": 40.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 2,
+    "totale_responsabili": 7
+   },
+   "valore": 28.57142857142857,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 2,
+    "totale_responsabili": 10
+   },
+   "valore": 20.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 2,
+    "totale_responsabili": 25
+   },
+   "valore": 8.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 2,
+    "totale_responsabili": 40
+   },
+   "valore": 5.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 2,
+    "totale_responsabili": 80
+   },
+   "valore": 2.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 2,
+    "totale_responsabili": 100
+   },
+   "valore": 2.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 2,
+    "totale_responsabili": 250
+   },
+   "valore": 0.8,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 3,
+    "totale_responsabili": 1
+   },
+   "valore": 300.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 3,
+    "totale_responsabili": 2
+   },
+   "valore": 150.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 3,
+    "totale_responsabili": 3
+   },
+   "valore": 100.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 3,
+    "totale_responsabili": 5
+   },
+   "valore": 60.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 3,
+    "totale_responsabili": 7
+   },
+   "valore": 42.857142857142854,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 3,
+    "totale_responsabili": 10
+   },
+   "valore": 30.0,
+   "valutazione": "Parziale"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 3,
+    "totale_responsabili": 25
+   },
+   "valore": 12.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 3,
+    "totale_responsabili": 40
+   },
+   "valore": 7.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 3,
+    "totale_responsabili": 80
+   },
+   "valore": 3.75,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 3,
+    "totale_responsabili": 100
+   },
+   "valore": 3.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 3,
+    "totale_responsabili": 250
+   },
+   "valore": 1.2,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 5,
+    "totale_responsabili": 1
+   },
+   "valore": 500.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 5,
+    "totale_responsabili": 2
+   },
+   "valore": 250.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 5,
+    "totale_responsabili": 3
+   },
+   "valore": 166.66666666666669,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 5,
+    "totale_responsabili": 5
+   },
+   "valore": 100.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 5,
+    "totale_responsabili": 7
+   },
+   "valore": 71.42857142857143,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 5,
+    "totale_responsabili": 10
+   },
+   "valore": 50.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 5,
+    "totale_responsabili": 25
+   },
+   "valore": 20.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 5,
+    "totale_responsabili": 40
+   },
+   "valore": 12.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 5,
+    "totale_responsabili": 80
+   },
+   "valore": 6.25,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 5,
+    "totale_responsabili": 100
+   },
+   "valore": 5.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 5,
+    "totale_responsabili": 250
+   },
+   "valore": 2.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 7,
+    "totale_responsabili": 1
+   },
+   "valore": 700.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 7,
+    "totale_responsabili": 2
+   },
+   "valore": 350.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 7,
+    "totale_responsabili": 3
+   },
+   "valore": 233.33333333333334,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 7,
+    "totale_responsabili": 5
+   },
+   "valore": 140.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 7,
+    "totale_responsabili": 7
+   },
+   "valore": 100.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 7,
+    "totale_responsabili": 10
+   },
+   "valore": 70.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 7,
+    "totale_responsabili": 25
+   },
+   "valore": 28.000000000000004,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 7,
+    "totale_responsabili": 40
+   },
+   "valore": 17.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 7,
+    "totale_responsabili": 80
+   },
+   "valore": 8.75,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 7,
+    "totale_responsabili": 100
+   },
+   "valore": 7.000000000000001,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 7,
+    "totale_responsabili": 250
+   },
+   "valore": 2.8000000000000003,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 10,
+    "totale_responsabili": 1
+   },
+   "valore": 1000.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 10,
+    "totale_responsabili": 2
+   },
+   "valore": 500.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 10,
+    "totale_responsabili": 3
+   },
+   "valore": 333.33333333333337,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 10,
+    "totale_responsabili": 5
+   },
+   "valore": 200.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 10,
+    "totale_responsabili": 7
+   },
+   "valore": 142.85714285714286,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 10,
+    "totale_responsabili": 10
+   },
+   "valore": 100.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 10,
+    "totale_responsabili": 25
+   },
+   "valore": 40.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 10,
+    "totale_responsabili": 40
+   },
+   "valore": 25.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 10,
+    "totale_responsabili": 80
+   },
+   "valore": 12.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 10,
+    "totale_responsabili": 100
+   },
+   "valore": 10.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 10,
+    "totale_responsabili": 250
+   },
+   "valore": 4.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 25,
+    "totale_responsabili": 1
+   },
+   "valore": 2500.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 25,
+    "totale_responsabili": 2
+   },
+   "valore": 1250.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 25,
+    "totale_responsabili": 3
+   },
+   "valore": 833.3333333333334,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 25,
+    "totale_responsabili": 5
+   },
+   "valore": 500.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 25,
+    "totale_responsabili": 7
+   },
+   "valore": 357.14285714285717,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 25,
+    "totale_responsabili": 10
+   },
+   "valore": 250.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 25,
+    "totale_responsabili": 25
+   },
+   "valore": 100.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 25,
+    "totale_responsabili": 40
+   },
+   "valore": 62.5,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 25,
+    "totale_responsabili": 80
+   },
+   "valore": 31.25,
+   "valutazione": "Parziale"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 25,
+    "totale_responsabili": 100
+   },
+   "valore": 25.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 25,
+    "totale_responsabili": 250
+   },
+   "valore": 10.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 40,
+    "totale_responsabili": 1
+   },
+   "valore": 4000.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 40,
+    "totale_responsabili": 2
+   },
+   "valore": 2000.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 40,
+    "totale_responsabili": 3
+   },
+   "valore": 1333.3333333333335,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 40,
+    "totale_responsabili": 5
+   },
+   "valore": 800.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 40,
+    "totale_responsabili": 7
+   },
+   "valore": 571.4285714285714,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 40,
+    "totale_responsabili": 10
+   },
+   "valore": 400.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 40,
+    "totale_responsabili": 25
+   },
+   "valore": 160.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 40,
+    "totale_responsabili": 40
+   },
+   "valore": 100.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 40,
+    "totale_responsabili": 80
+   },
+   "valore": 50.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 40,
+    "totale_responsabili": 100
+   },
+   "valore": 40.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 40,
+    "totale_responsabili": 250
+   },
+   "valore": 16.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 80,
+    "totale_responsabili": 1
+   },
+   "valore": 8000.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 80,
+    "totale_responsabili": 2
+   },
+   "valore": 4000.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 80,
+    "totale_responsabili": 3
+   },
+   "valore": 2666.666666666667,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 80,
+    "totale_responsabili": 5
+   },
+   "valore": 1600.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 80,
+    "totale_responsabili": 7
+   },
+   "valore": 1142.857142857143,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 80,
+    "totale_responsabili": 10
+   },
+   "valore": 800.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 80,
+    "totale_responsabili": 25
+   },
+   "valore": 320.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 80,
+    "totale_responsabili": 40
+   },
+   "valore": 200.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 80,
+    "totale_responsabili": 80
+   },
+   "valore": 100.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 80,
+    "totale_responsabili": 100
+   },
+   "valore": 80.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 80,
+    "totale_responsabili": 250
+   },
+   "valore": 32.0,
+   "valutazione": "Parziale"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 100,
+    "totale_responsabili": 1
+   },
+   "valore": 10000.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 100,
+    "totale_responsabili": 2
+   },
+   "valore": 5000.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 100,
+    "totale_responsabili": 3
+   },
+   "valore": 3333.3333333333335,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 100,
+    "totale_responsabili": 5
+   },
+   "valore": 2000.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 100,
+    "totale_responsabili": 7
+   },
+   "valore": 1428.5714285714287,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 100,
+    "totale_responsabili": 10
+   },
+   "valore": 1000.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 100,
+    "totale_responsabili": 25
+   },
+   "valore": 400.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 100,
+    "totale_responsabili": 40
+   },
+   "valore": 250.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 100,
+    "totale_responsabili": 80
+   },
+   "valore": 125.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 100,
+    "totale_responsabili": 100
+   },
+   "valore": 100.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 100,
+    "totale_responsabili": 250
+   },
+   "valore": 40.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 250,
+    "totale_responsabili": 1
+   },
+   "valore": 25000.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 250,
+    "totale_responsabili": 2
+   },
+   "valore": 12500.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 250,
+    "totale_responsabili": 3
+   },
+   "valore": 8333.333333333332,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 250,
+    "totale_responsabili": 5
+   },
+   "valore": 5000.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 250,
+    "totale_responsabili": 7
+   },
+   "valore": 3571.4285714285716,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 250,
+    "totale_responsabili": 10
+   },
+   "valore": 2500.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 250,
+    "totale_responsabili": 25
+   },
+   "valore": 1000.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 250,
+    "totale_responsabili": 40
+   },
+   "valore": 625.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 250,
+    "totale_responsabili": 80
+   },
+   "valore": 312.5,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 250,
+    "totale_responsabili": 100
+   },
+   "valore": 250.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "donne_responsabili": 250,
+    "totale_responsabili": 250
+   },
+   "valore": 100.0,
+   "valutazione": "Sì"
+  }
+ ],
+ "r1": [
+  {
+   "inputs": {
+    "retr_uomini": 0.0,
+    "retr_donne": 0.0
+   },
+   "valore": 0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 0.0,
+    "retr_donne": 18000.0
+   },
+   "valore": 0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 0.0,
+    "retr_donne": 20000.0
+   },
+   "valore": 0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 0.0,
+    "retr_donne": 25000.0
+   },
+   "valore": 0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 0.0,
+    "retr_donne": 27000.0
+   },
+   "valore": 0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 0.0,
+    "retr_donne": 30000.0
+   },
+   "valore": 0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 0.0,
+    "retr_donne": 32000.0
+   },
+   "valore": 0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 0.0,
+    "retr_donne": 35000.0
+   },
+   "valore": 0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 0.0,
+    "retr_donne": 40000.0
+   },
+   "valore": 0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 18000.0,
+    "retr_donne": 0.0
+   },
+   "valore": 100.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 18000.0,
+    "retr_donne": 18000.0
+   },
+   "valore": 0.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 18000.0,
+    "retr_donne": 20000.0
+   },
+   "valore": -11.11111111111111,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 18000.0,
+    "retr_donne": 25000.0
+   },
+   "valore": -38.88888888888889,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 18000.0,
+    "retr_donne": 27000.0
+   },
+   "valore": -50.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 18000.0,
+    "retr_donne": 30000.0
+   },
+   "valore": -66.66666666666666,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 18000.0,
+    "retr_donne": 32000.0
+   },
+   "valore": -77.77777777777779,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 18000.0,
+    "retr_donne": 35000.0
+   },
+   "valore": -94.44444444444444,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 18000.0,
+    "retr_donne": 40000.0
+   },
+   "valore": -122.22222222222223,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 20000.0,
+    "retr_donne": 0.0
+   },
+   "valore": 100.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 20000.0,
+    "retr_donne": 18000.0
+   },
+   "valore": 10.0,
+   "valutazione": "Parziale"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 20000.0,
+    "retr_donne": 20000.0
+   },
+   "valore": 0.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 20000.0,
+    "retr_donne": 25000.0
+   },
+   "valore": -25.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 20000.0,
+    "retr_donne": 27000.0
+   },
+   "valore": -35.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 20000.0,
+    "retr_donne": 30000.0
+   },
+   "valore": -50.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 20000.0,
+    "retr_donne": 32000.0
+   },
+   "valore": -60.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 20000.0,
+    "retr_donne": 35000.0
+   },
+   "valore": -75.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 20000.0,
+    "retr_donne": 40000.0
+   },
+   "valore": -100.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 25000.0,
+    "retr_donne": 0.0
+   },
+   "valore": 100.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 25000.0,
+    "retr_donne": 18000.0
+   },
+   "valore": 28.000000000000004,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 25000.0,
+    "retr_donne": 20000.0
+   },
+   "valore": 20.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 25000.0,
+    "retr_donne": 25000.0
+   },
+   "valore": 0.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 25000.0,
+    "retr_donne": 27000.0
+   },
+   "valore": -8.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 25000.0,
+    "retr_donne": 30000.0
+   },
+   "valore": -20.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 25000.0,
+    "retr_donne": 32000.0
+   },
+   "valore": -28.000000000000004,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 25000.0,
+    "retr_donne": 35000.0
+   },
+   "valore": -40.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 25000.0,
+    "retr_donne": 40000.0
+   },
+   "valore": -60.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 27000.0,
+    "retr_donne": 0.0
+   },
+   "valore": 100.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 27000.0,
+    "retr_donne": 18000.0
+   },
+   "valore": 33.33333333333333,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 27000.0,
+    "retr_donne": 20000.0
+   },
+   "valore": 25.925925925925924,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 27000.0,
+    "retr_donne": 25000.0
+   },
+   "valore": 7.4074074074074066,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 27000.0,
+    "retr_donne": 27000.0
+   },
+   "valore": 0.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 27000.0,
+    "retr_donne": 30000.0
+   },
+   "valore": -11.11111111111111,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 27000.0,
+    "retr_donne": 32000.0
+   },
+   "valore": -18.51851851851852,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 27000.0,
+    "retr_donne": 35000.0
+   },
+   "valore": -29.629629629629626,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 27000.0,
+    "retr_donne": 40000.0
+   },
+   "valore": -48.148148148148145,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 30000.0,
+    "retr_donne": 0.0
+   },
+   "valore": 100.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 30000.0,
+    "retr_donne": 18000.0
+   },
+   "valore": 40.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 30000.0,
+    "retr_donne": 20000.0
+   },
+   "valore": 33.33333333333333,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 30000.0,
+    "retr_donne": 25000.0
+   },
+   "valore": 16.666666666666664,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 30000.0,
+    "retr_donne": 27000.0
+   },
+   "valore": 10.0,
+   "valutazione": "Parziale"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 30000.0,
+    "retr_donne": 30000.0
+   },
+   "valore": 0.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 30000.0,
+    "retr_donne": 32000.0
+   },
+   "valore": -6.666666666666667,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 30000.0,
+    "retr_donne": 35000.0
+   },
+   "valore": -16.666666666666664,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 30000.0,
+    "retr_donne": 40000.0
+   },
+   "valore": -33.33333333333333,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 32000.0,
+    "retr_donne": 0.0
+   },
+   "valore": 100.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 32000.0,
+    "retr_donne": 18000.0
+   },
+   "valore": 43.75,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 32000.0,
+    "retr_donne": 20000.0
+   },
+   "valore": 37.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 32000.0,
+    "retr_donne": 25000.0
+   },
+   "valore": 21.875,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 32000.0,
+    "retr_donne": 27000.0
+   },
+   "valore": 15.625,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 32000.0,
+    "retr_donne": 30000.0
+   },
+   "valore": 6.25,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 32000.0,
+    "retr_donne": 32000.0
+   },
+   "valore": 0.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 32000.0,
+    "retr_donne": 35000.0
+   },
+   "valore": -9.375,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 32000.0,
+    "retr_donne": 40000.0
+   },
+   "valore": -25.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 35000.0,
+    "retr_donne": 0.0
+   },
+   "valore": 100.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 35000.0,
+    "retr_donne": 18000.0
+   },
+   "valore": 48.57142857142857,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 35000.0,
+    "retr_donne": 20000.0
+   },
+   "valore": 42.857142857142854,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 35000.0,
+    "retr_donne": 25000.0
+   },
+   "valore": 28.57142857142857,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 35000.0,
+    "retr_donne": 27000.0
+   },
+   "valore": 22.857142857142858,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 35000.0,
+    "retr_donne": 30000.0
+   },
+   "valore": 14.285714285714285,
+   "valutazione": "Parziale"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 35000.0,
+    "retr_donne": 32000.0
+   },
+   "valore": 8.571428571428571,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 35000.0,
+    "retr_donne": 35000.0
+   },
+   "valore": 0.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 35000.0,
+    "retr_donne": 40000.0
+   },
+   "valore": -14.285714285714285,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 40000.0,
+    "retr_donne": 0.0
+   },
+   "valore": 100.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 40000.0,
+    "retr_donne": 18000.0
+   },
+   "valore": 55.00000000000001,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 40000.0,
+    "retr_donne": 20000.0
+   },
+   "valore": 50.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 40000.0,
+    "retr_donne": 25000.0
+   },
+   "valore": 37.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 40000.0,
+    "retr_donne": 27000.0
+   },
+   "valore": 32.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 40000.0,
+    "retr_donne": 30000.0
+   },
+   "valore": 25.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 40000.0,
+    "retr_donne": 32000.0
+   },
+   "valore": 20.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 40000.0,
+    "retr_donne": 35000.0
+   },
+   "valore": 12.5,
+   "valutazione": "Parziale"
+  },
+  {
+   "inputs": {
+    "retr_uomini": 40000.0,
+    "retr_donne": 40000.0
+   },
+   "valore": 0.0,
+   "valutazione": "Sì"
+  }
+ ],
+ "ge4": [
+  {
+   "inputs": {
+    "padri_fruitori": 0,
+    "padri_potenziali": 1
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 0,
+    "padri_potenziali": 2
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 0,
+    "padri_potenziali": 3
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 0,
+    "padri_potenziali": 5
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 0,
+    "padri_potenziali": 7
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 0,
+    "padri_potenziali": 10
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 0,
+    "padri_potenziali": 25
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 0,
+    "padri_potenziali": 40
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 0,
+    "padri_potenziali": 80
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 0,
+    "padri_potenziali": 100
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 0,
+    "padri_potenziali": 250
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 1,
+    "padri_potenziali": 1
+   },
+   "valore": 100.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 1,
+    "padri_potenziali": 2
+   },
+   "valore": 50.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 1,
+    "padri_potenziali": 3
+   },
+   "valore": 33.33333333333333,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 1,
+    "padri_potenziali": 5
+   },
+   "valore": 20.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 1,
+    "padri_potenziali": 7
+   },
+   "valore": 14.285714285714285,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 1,
+    "padri_potenziali": 10
+   },
+   "valore": 10.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 1,
+    "padri_potenziali": 25
+   },
+   "valore": 4.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 1,
+    "padri_potenziali": 40
+   },
+   "valore": 2.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 1,
+    "padri_potenziali": 80
+   },
+   "valore": 1.25,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 1,
+    "padri_potenziali": 100
+   },
+   "valore": 1.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 1,
+    "padri_potenziali": 250
+   },
+   "valore": 0.4,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 2,
+    "padri_potenziali": 1
+   },
+   "valore": 200.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 2,
+    "padri_potenziali": 2
+   },
+   "valore": 100.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 2,
+    "padri_potenziali": 3
+   },
+   "valore": 66.66666666666666,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 2,
+    "padri_potenziali": 5
+   },
+   "valore": 40.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 2,
+    "padri_potenziali": 7
+   },
+   "valore": 28.57142857142857,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 2,
+    "padri_potenziali": 10
+   },
+   "valore": 20.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 2,
+    "padri_potenziali": 25
+   },
+   "valore": 8.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 2,
+    "padri_potenziali": 40
+   },
+   "valore": 5.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 2,
+    "padri_potenziali": 80
+   },
+   "valore": 2.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 2,
+    "padri_potenziali": 100
+   },
+   "valore": 2.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 2,
+    "padri_potenziali": 250
+   },
+   "valore": 0.8,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 3,
+    "padri_potenziali": 1
+   },
+   "valore": 300.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 3,
+    "padri_potenziali": 2
+   },
+   "valore": 150.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 3,
+    "padri_potenziali": 3
+   },
+   "valore": 100.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 3,
+    "padri_potenziali": 5
+   },
+   "valore": 60.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 3,
+    "padri_potenziali": 7
+   },
+   "valore": 42.857142857142854,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 3,
+    "padri_potenziali": 10
+   },
+   "valore": 30.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 3,
+    "padri_potenziali": 25
+   },
+   "valore": 12.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 3,
+    "padri_potenziali": 40
+   },
+   "valore": 7.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 3,
+    "padri_potenziali": 80
+   },
+   "valore": 3.75,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 3,
+    "padri_potenziali": 100
+   },
+   "valore": 3.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 3,
+    "padri_potenziali": 250
+   },
+   "valore": 1.2,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 5,
+    "padri_potenziali": 1
+   },
+   "valore": 500.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 5,
+    "padri_potenziali": 2
+   },
+   "valore": 250.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 5,
+    "padri_potenziali": 3
+   },
+   "valore": 166.66666666666669,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 5,
+    "padri_potenziali": 5
+   },
+   "valore": 100.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 5,
+    "padri_potenziali": 7
+   },
+   "valore": 71.42857142857143,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 5,
+    "padri_potenziali": 10
+   },
+   "valore": 50.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 5,
+    "padri_potenziali": 25
+   },
+   "valore": 20.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 5,
+    "padri_potenziali": 40
+   },
+   "valore": 12.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 5,
+    "padri_potenziali": 80
+   },
+   "valore": 6.25,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 5,
+    "padri_potenziali": 100
+   },
+   "valore": 5.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 5,
+    "padri_potenziali": 250
+   },
+   "valore": 2.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 7,
+    "padri_potenziali": 1
+   },
+   "valore": 700.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 7,
+    "padri_potenziali": 2
+   },
+   "valore": 350.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 7,
+    "padri_potenziali": 3
+   },
+   "valore": 233.33333333333334,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 7,
+    "padri_potenziali": 5
+   },
+   "valore": 140.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 7,
+    "padri_potenziali": 7
+   },
+   "valore": 100.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 7,
+    "padri_potenziali": 10
+   },
+   "valore": 70.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 7,
+    "padri_potenziali": 25
+   },
+   "valore": 28.000000000000004,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 7,
+    "padri_potenziali": 40
+   },
+   "valore": 17.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 7,
+    "padri_potenziali": 80
+   },
+   "valore": 8.75,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 7,
+    "padri_potenziali": 100
+   },
+   "valore": 7.000000000000001,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 7,
+    "padri_potenziali": 250
+   },
+   "valore": 2.8000000000000003,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 10,
+    "padri_potenziali": 1
+   },
+   "valore": 1000.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 10,
+    "padri_potenziali": 2
+   },
+   "valore": 500.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 10,
+    "padri_potenziali": 3
+   },
+   "valore": 333.33333333333337,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 10,
+    "padri_potenziali": 5
+   },
+   "valore": 200.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 10,
+    "padri_potenziali": 7
+   },
+   "valore": 142.85714285714286,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 10,
+    "padri_potenziali": 10
+   },
+   "valore": 100.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 10,
+    "padri_potenziali": 25
+   },
+   "valore": 40.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 10,
+    "padri_potenziali": 40
+   },
+   "valore": 25.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 10,
+    "padri_potenziali": 80
+   },
+   "valore": 12.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 10,
+    "padri_potenziali": 100
+   },
+   "valore": 10.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 10,
+    "padri_potenziali": 250
+   },
+   "valore": 4.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 25,
+    "padri_potenziali": 1
+   },
+   "valore": 2500.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 25,
+    "padri_potenziali": 2
+   },
+   "valore": 1250.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 25,
+    "padri_potenziali": 3
+   },
+   "valore": 833.3333333333334,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 25,
+    "padri_potenziali": 5
+   },
+   "valore": 500.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 25,
+    "padri_potenziali": 7
+   },
+   "valore": 357.14285714285717,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 25,
+    "padri_potenziali": 10
+   },
+   "valore": 250.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 25,
+    "padri_potenziali": 25
+   },
+   "valore": 100.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 25,
+    "padri_potenziali": 40
+   },
+   "valore": 62.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 25,
+    "padri_potenziali": 80
+   },
+   "valore": 31.25,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 25,
+    "padri_potenziali": 100
+   },
+   "valore": 25.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 25,
+    "padri_potenziali": 250
+   },
+   "valore": 10.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 40,
+    "padri_potenziali": 1
+   },
+   "valore": 4000.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 40,
+    "padri_potenziali": 2
+   },
+   "valore": 2000.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 40,
+    "padri_potenziali": 3
+   },
+   "valore": 1333.3333333333335,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 40,
+    "padri_potenziali": 5
+   },
+   "valore": 800.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 40,
+    "padri_potenziali": 7
+   },
+   "valore": 571.4285714285714,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 40,
+    "padri_potenziali": 10
+   },
+   "valore": 400.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 40,
+    "padri_potenziali": 25
+   },
+   "valore": 160.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 40,
+    "padri_potenziali": 40
+   },
+   "valore": 100.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 40,
+    "padri_potenziali": 80
+   },
+   "valore": 50.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 40,
+    "padri_potenziali": 100
+   },
+   "valore": 40.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 40,
+    "padri_potenziali": 250
+   },
+   "valore": 16.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 80,
+    "padri_potenziali": 1
+   },
+   "valore": 8000.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 80,
+    "padri_potenziali": 2
+   },
+   "valore": 4000.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 80,
+    "padri_potenziali": 3
+   },
+   "valore": 2666.666666666667,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 80,
+    "padri_potenziali": 5
+   },
+   "valore": 1600.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 80,
+    "padri_potenziali": 7
+   },
+   "valore": 1142.857142857143,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 80,
+    "padri_potenziali": 10
+   },
+   "valore": 800.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 80,
+    "padri_potenziali": 25
+   },
+   "valore": 320.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 80,
+    "padri_potenziali": 40
+   },
+   "valore": 200.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 80,
+    "padri_potenziali": 80
+   },
+   "valore": 100.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 80,
+    "padri_potenziali": 100
+   },
+   "valore": 80.0,
+   "valutazione": "Parziale"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 80,
+    "padri_potenziali": 250
+   },
+   "valore": 32.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 100,
+    "padri_potenziali": 1
+   },
+   "valore": 10000.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 100,
+    "padri_potenziali": 2
+   },
+   "valore": 5000.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 100,
+    "padri_potenziali": 3
+   },
+   "valore": 3333.3333333333335,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 100,
+    "padri_potenziali": 5
+   },
+   "valore": 2000.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 100,
+    "padri_potenziali": 7
+   },
+   "valore": 1428.5714285714287,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 100,
+    "padri_potenziali": 10
+   },
+   "valore": 1000.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 100,
+    "padri_potenziali": 25
+   },
+   "valore": 400.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 100,
+    "padri_potenziali": 40
+   },
+   "valore": 250.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 100,
+    "padri_potenziali": 80
+   },
+   "valore": 125.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 100,
+    "padri_potenziali": 100
+   },
+   "valore": 100.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 100,
+    "padri_potenziali": 250
+   },
+   "valore": 40.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 250,
+    "padri_potenziali": 1
+   },
+   "valore": 25000.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 250,
+    "padri_potenziali": 2
+   },
+   "valore": 12500.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 250,
+    "padri_potenziali": 3
+   },
+   "valore": 8333.333333333332,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 250,
+    "padri_potenziali": 5
+   },
+   "valore": 5000.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 250,
+    "padri_potenziali": 7
+   },
+   "valore": 3571.4285714285716,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 250,
+    "padri_potenziali": 10
+   },
+   "valore": 2500.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 250,
+    "padri_potenziali": 25
+   },
+   "valore": 1000.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 250,
+    "padri_potenziali": 40
+   },
+   "valore": 625.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 250,
+    "padri_potenziali": 80
+   },
+   "valore": 312.5,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 250,
+    "padri_potenziali": 100
+   },
+   "valore": 250.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "padri_fruitori": 250,
+    "padri_potenziali": 250
+   },
+   "valore": 100.0,
+   "valutazione": "Sì"
+  }
+ ],
+ "ge5": [
+  {
+   "inputs": {
+    "giorni_fruiti": 0.0,
+    "giorni_legge": 1.0
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 0.0,
+    "giorni_legge": 5.0
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 0.0,
+    "giorni_legge": 8.0
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 0.0,
+    "giorni_legge": 10.0
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 0.0,
+    "giorni_legge": 12.0
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 0.0,
+    "giorni_legge": 15.0
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 0.0,
+    "giorni_legge": 80.0
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 0.0,
+    "giorni_legge": 100.0
+   },
+   "valore": 0.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 1.0,
+    "giorni_legge": 1.0
+   },
+   "valore": 100.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 1.0,
+    "giorni_legge": 5.0
+   },
+   "valore": 20.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 1.0,
+    "giorni_legge": 8.0
+   },
+   "valore": 12.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 1.0,
+    "giorni_legge": 10.0
+   },
+   "valore": 10.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 1.0,
+    "giorni_legge": 12.0
+   },
+   "valore": 8.333333333333332,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 1.0,
+    "giorni_legge": 15.0
+   },
+   "valore": 6.666666666666667,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 1.0,
+    "giorni_legge": 80.0
+   },
+   "valore": 1.25,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 1.0,
+    "giorni_legge": 100.0
+   },
+   "valore": 1.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 5.0,
+    "giorni_legge": 1.0
+   },
+   "valore": 500.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 5.0,
+    "giorni_legge": 5.0
+   },
+   "valore": 100.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 5.0,
+    "giorni_legge": 8.0
+   },
+   "valore": 62.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 5.0,
+    "giorni_legge": 10.0
+   },
+   "valore": 50.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 5.0,
+    "giorni_legge": 12.0
+   },
+   "valore": 41.66666666666667,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 5.0,
+    "giorni_legge": 15.0
+   },
+   "valore": 33.33333333333333,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 5.0,
+    "giorni_legge": 80.0
+   },
+   "valore": 6.25,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 5.0,
+    "giorni_legge": 100.0
+   },
+   "valore": 5.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 8.0,
+    "giorni_legge": 1.0
+   },
+   "valore": 800.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 8.0,
+    "giorni_legge": 5.0
+   },
+   "valore": 160.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 8.0,
+    "giorni_legge": 8.0
+   },
+   "valore": 100.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 8.0,
+    "giorni_legge": 10.0
+   },
+   "valore": 80.0,
+   "valutazione": "Parziale"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 8.0,
+    "giorni_legge": 12.0
+   },
+   "valore": 66.66666666666666,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 8.0,
+    "giorni_legge": 15.0
+   },
+   "valore": 53.333333333333336,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 8.0,
+    "giorni_legge": 80.0
+   },
+   "valore": 10.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 8.0,
+    "giorni_legge": 100.0
+   },
+   "valore": 8.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 10.0,
+    "giorni_legge": 1.0
+   },
+   "valore": 1000.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 10.0,
+    "giorni_legge": 5.0
+   },
+   "valore": 200.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 10.0,
+    "giorni_legge": 8.0
+   },
+   "valore": 125.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 10.0,
+    "giorni_legge": 10.0
+   },
+   "valore": 100.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 10.0,
+    "giorni_legge": 12.0
+   },
+   "valore": 83.33333333333334,
+   "valutazione": "Parziale"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 10.0,
+    "giorni_legge": 15.0
+   },
+   "valore": 66.66666666666666,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 10.0,
+    "giorni_legge": 80.0
+   },
+   "valore": 12.5,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 10.0,
+    "giorni_legge": 100.0
+   },
+   "valore": 10.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 12.0,
+    "giorni_legge": 1.0
+   },
+   "valore": 1200.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 12.0,
+    "giorni_legge": 5.0
+   },
+   "valore": 240.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 12.0,
+    "giorni_legge": 8.0
+   },
+   "valore": 150.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 12.0,
+    "giorni_legge": 10.0
+   },
+   "valore": 120.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 12.0,
+    "giorni_legge": 12.0
+   },
+   "valore": 100.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 12.0,
+    "giorni_legge": 15.0
+   },
+   "valore": 80.0,
+   "valutazione": "Parziale"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 12.0,
+    "giorni_legge": 80.0
+   },
+   "valore": 15.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 12.0,
+    "giorni_legge": 100.0
+   },
+   "valore": 12.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 15.0,
+    "giorni_legge": 1.0
+   },
+   "valore": 1500.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 15.0,
+    "giorni_legge": 5.0
+   },
+   "valore": 300.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 15.0,
+    "giorni_legge": 8.0
+   },
+   "valore": 187.5,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 15.0,
+    "giorni_legge": 10.0
+   },
+   "valore": 150.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 15.0,
+    "giorni_legge": 12.0
+   },
+   "valore": 125.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 15.0,
+    "giorni_legge": 15.0
+   },
+   "valore": 100.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 15.0,
+    "giorni_legge": 80.0
+   },
+   "valore": 18.75,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 15.0,
+    "giorni_legge": 100.0
+   },
+   "valore": 15.0,
+   "valutazione": "No"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 80.0,
+    "giorni_legge": 1.0
+   },
+   "valore": 8000.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 80.0,
+    "giorni_legge": 5.0
+   },
+   "valore": 1600.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 80.0,
+    "giorni_legge": 8.0
+   },
+   "valore": 1000.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 80.0,
+    "giorni_legge": 10.0
+   },
+   "valore": 800.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 80.0,
+    "giorni_legge": 12.0
+   },
+   "valore": 666.6666666666667,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 80.0,
+    "giorni_legge": 15.0
+   },
+   "valore": 533.3333333333333,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 80.0,
+    "giorni_legge": 80.0
+   },
+   "valore": 100.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 80.0,
+    "giorni_legge": 100.0
+   },
+   "valore": 80.0,
+   "valutazione": "Parziale"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 100.0,
+    "giorni_legge": 1.0
+   },
+   "valore": 10000.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 100.0,
+    "giorni_legge": 5.0
+   },
+   "valore": 2000.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 100.0,
+    "giorni_legge": 8.0
+   },
+   "valore": 1250.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 100.0,
+    "giorni_legge": 10.0
+   },
+   "valore": 1000.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 100.0,
+    "giorni_legge": 12.0
+   },
+   "valore": 833.3333333333334,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 100.0,
+    "giorni_legge": 15.0
+   },
+   "valore": 666.6666666666667,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 100.0,
+    "giorni_legge": 80.0
+   },
+   "valore": 125.0,
+   "valutazione": "Sì"
+  },
+  {
+   "inputs": {
+    "giorni_fruiti": 100.0,
+    "giorni_legge": 100.0
+   },
+   "valore": 100.0,
+   "valutazione": "Sì"
+  }
+ ]
+}

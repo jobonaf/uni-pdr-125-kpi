@@ -1,0 +1,9 @@
+{
+  "name": "uni-pdr-125-kpi-frontend",
+  "private": true,
+  "type": "module",
+  "description": "Frontend statico (Bootstrap Italia + GitHub Pages) dello strumento KPI UNI/PdR 125:2022",
+  "scripts": {
+    "test": "node --test"
+  }
+}

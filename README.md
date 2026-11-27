@@ -113,10 +113,42 @@ L'app si aprirà automaticamente nel browser su `http://localhost:8501`.
 
 > **Windows — se `streamlit` non viene trovato nel PATH:**
 > ```bash
-> python -m streamlit run src/app.py
+> python -m streamlit run streamlit_app.py
 > # oppure, se l'eseguibile è in .venv:
 > .venv\Scripts\python.exe -m streamlit run streamlit_app.py
 > ```
+
+## Versione online
+
+Il frontend statico (Bootstrap Italia, nessun server) viene pubblicato su GitHub Pages dal ramo `main`:
+<https://jobonaf.github.io/uni-pdr-125-kpi/> (vedi `frontend/README.md` per l'attivazione).
+
+## Test
+
+```
+pip install pytest
+python -m pytest -q tests
+```
+
+Per la logica JavaScript del frontend serve Node 20+ (nessun `npm install`):
+
+```
+cd frontend
+node --test
+```
+
+I test sulla logica (`src/data`, `src/logic`) non richiedono Streamlit; quelli di
+interfaccia (`tests/test_ui_calcolatori.py`) vengono saltati se Streamlit non è installato.
+
+## Catalogo JSON per il frontend statico
+
+Dopo ogni modifica a `src/data/kpi_catalog.py` rigenerare il catalogo e committarlo:
+
+```
+python scripts/export_catalog.py
+```
+
+`python scripts/export_catalog.py --check` verifica che sia aggiornato (lo fa anche la suite di test).
 
 ## Utilizzo
 

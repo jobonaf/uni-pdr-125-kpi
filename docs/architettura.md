@@ -11,6 +11,9 @@ Lo strumento è strutturato in tre livelli separati:
 Questa separazione consente di sostituire il layer UI (es. migrazione da
 Streamlit a Bootstrap Italia) senza modificare la logica di calcolo.
 
+Funzioni, input/output, regole di validazione, diagrammi di flusso ed equivalenza
+Python ↔ JavaScript sono descritti in [`logica-calcolo.md`](logica-calcolo.md).
+
 ## Struttura di `src/`
 
 ```
@@ -21,9 +24,11 @@ src/
 │   └── kpi_catalog.py      # AREE, CLUSTER, KPI_DA_RENDICONTARE_PER_FASCIA
 ├── logic/
 │   ├── __init__.py
-│   └── scoring.py          # calcola_score_area(), calcola_score_globale(),
-│                           # kpi_applicabile(), is_kpi_da_rendicontare(),
-│                           # calcola_kpi_non_compilati()
+│   ├── scoring.py          # calcola_score_area(), calcola_score_globale(),
+│   │                       # kpi_applicabile(), is_kpi_da_rendicontare(),
+│   │                       # calcola_kpi_non_compilati()
+│   ├── calcolatori.py      # calcola_valore(), valuta(), calcola_kpi()
+│   └── catalogo.py         # trova_kpi(), formatta_fasce(), nota_equivalente()
 └── ui/
     ├── __init__.py
     ├── anagrafica.py        # render_anagrafica()
@@ -47,7 +52,8 @@ src/
     "testo": "...",                # testo breve per UI
     "descrizione": "...",          # testo esteso normativo
     "fasceRichieste": [1, 2, 3, 4], # fasce dimensionali applicabili
-    "soglia": "..."                # solo per KPI quantitativi
+    "soglia": "...",               # solo per KPI quantitativi
+    "equivalente": "oc2"           # opzionale: altro KPI della coppia mutuamente esclusiva
 }
 ```
 
@@ -82,6 +88,33 @@ src/
     "esportato": "2025-04-20T10:30:00"
 }
 ```
+
+## Calcolatori dei KPI quantitativi
+
+`CALCOLATORI_KPI` (in `kpi_catalog.py`) descrive ogni calcolatore **solo con dati**
+(input, tipo di formula, soglie), senza funzioni: è quindi serializzabile in JSON e
+riusabile lato client. `src/logic/calcolatori.py` ne interpreta `formula`
+(`differenza`, `percentuale`, `gap_percentuale`) e `valutazione`
+(`maggiore_uguale`, `minore`). Livelli `data` e `logic` non importano Streamlit
+(verificato da `tests/test_calcolatori.py`).
+
+## Esportazione per il frontend statico
+
+`scripts/export_catalog.py` serializza il catalogo (`src/data/export_catalog.py`) in
+`frontend/static/data/kpi-catalog.json`, che il frontend JavaScript (issue #20) usa come
+unica fonte dei dati. I parametri di scoring (soglia di certificazione, fattore per
+"Parziale", valutazioni ammesse) vivono in `kpi_catalog.py` e sono esportati nella sezione
+`scoring` del JSON. `tests/test_export_catalog.py` impedisce che JSON e catalogo divergano.
+
+## Logica di scoring in JavaScript
+
+`frontend/static/js/scoring.js` e `calcolatori.js` replicano `scoring.py` e `calcolatori.py`
+come funzioni pure che ricevono il catalogo (`kpi-catalog.json`) come primo argomento.
+Le due implementazioni sono tenute allineate da fixture condivise in `tests/fixtures/`
+(`calcolatori_golden.json`, `scoring_golden.json`): i test Python (`pytest`) e quelli
+JavaScript (`cd frontend && node --test`) verificano gli stessi risultati. Se la logica di
+scoring cambia volontariamente, rigenerare con `python scripts/export_golden_scoring.py`
+e aggiornare entrambe le implementazioni.
 
 ## Logica di calcolo dello score
 
