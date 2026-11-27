@@ -130,6 +130,9 @@ pip install pytest
 python -m pytest -q tests
 ```
 
+I test end-to-end e di accessibilità (`tests/e2e/`, Chromium + axe-core) richiedono `pip install playwright` e
+`python -m playwright install chromium`; senza, vengono saltati (in CI sono obbligatori).
+
 Per la logica JavaScript del frontend serve Node 20+ (nessun `npm install`):
 
 ```

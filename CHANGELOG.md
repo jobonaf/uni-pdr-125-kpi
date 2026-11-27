@@ -7,6 +7,16 @@ e il progetto adotta il [Versionamento Semantico](https://semver.org/lang/it/).
 
 ## [Non rilasciato]
 
+### Aggiunto (test end-to-end e accessibilità, issue #25 e #27)
+
+- `tests/e2e/`: flusso completo, calcolatore, persistenza tra sessioni, stato salvato corrotto, export/import con file validi e non validi, navigazione da tastiera, assenza di scorrimento orizzontale a 360/390/768/1280 px (Chromium, Playwright)
+- Scansione automatica **WCAG 2.1 AA con axe-core 4.14.0** su tutte le viste (incluso nel repository, solo per i test)
+- La CI installa Chromium ed esegue i test e2e; con `E2E_OBBLIGATORI=1` la mancanza del browser è un errore, non uno skip
+
+### Corretto
+
+- Contrasto dell'intestazione (2,55:1, sotto il minimo di 4,5:1): testo bianco sul blu
+
 ### Aggiunto (deploy su GitHub Pages, issue #20)
 
 - Workflow `.github/workflows/ci.yml`: test Python e JavaScript, controllo del catalogo JSON e, solo da `main`, pubblicazione di `index.html` e `static/` su GitHub Pages
