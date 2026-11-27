@@ -23,9 +23,13 @@ jobs:
         with:
           node-version: "22"
       - name: Installa le dipendenze
-        run: pip install -r requirements.txt pytest
-      - name: Test Python
+        run: pip install -r requirements.txt pytest playwright
+      - name: Installa Chromium per i test end-to-end
+        run: python -m playwright install --with-deps chromium
+      - name: Test Python (inclusi end-to-end e accessibilità)
         run: python -m pytest -q tests
+        env:
+          E2E_OBBLIGATORI: "1"
       - name: Catalogo JSON aggiornato
         run: python scripts/export_catalog.py --check
       - name: Test JavaScript
