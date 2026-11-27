@@ -1,0 +1,61 @@
+# Test su ogni push e, per il ramo main, pubblicazione del frontend su GitHub Pages.
+# Prima attivazione (una tantum): Settings → Pages → Build and deployment → Source: "GitHub Actions".
+name: CI e deploy
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+      - name: Installa le dipendenze
+        run: pip install -r requirements.txt pytest
+      - name: Test Python
+        run: python -m pytest -q tests
+      - name: Catalogo JSON aggiornato
+        run: python scripts/export_catalog.py --check
+      - name: Test JavaScript
+        run: node --test
+        working-directory: frontend
+      - name: Prepara il sito (solo i file serviti)
+        run: |
+          mkdir _site
+          cp -r frontend/index.html frontend/static _site/
+          test -f _site/static/data/kpi-catalog.json
+          test -f _site/static/vendor/bootstrap-italia/css/bootstrap-italia.min.css
+      - name: Carica l'artefatto per Pages
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+
+  deploy:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: test
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

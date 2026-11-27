@@ -7,6 +7,15 @@ e il progetto adotta il [Versionamento Semantico](https://semver.org/lang/it/).
 
 ## [Non rilasciato]
 
+### Aggiunto (deploy su GitHub Pages, issue #20)
+
+- Workflow `.github/workflows/ci.yml`: test Python e JavaScript, controllo del catalogo JSON e, solo da `main`, pubblicazione di `index.html` e `static/` su GitHub Pages
+- Test sulle risorse del frontend (`tests/test_frontend_assets.py`): font, file referenziati dall'HTML, percorsi relativi, workflow
+
+### Corretto
+
+- I font Titillium Web erano nel repository ma non collegati: Bootstrap Italia non dichiara gli `@font-face`, ora sono in `frontend/static/css/app.css` e il sito usa il font senza CDN
+
 ### Aggiunto (report e confronto tra anni nel frontend, issue #24)
 
 - Pagina **Report** stampabile (A4, stili di stampa dedicati): intestazione, score globale, tabella dei KPI per area con valutazione, valore e note; "Stampa / salva PDF"

@@ -118,6 +118,11 @@ L'app si aprirà automaticamente nel browser su `http://localhost:8501`.
 > .venv\Scripts\python.exe -m streamlit run streamlit_app.py
 > ```
 
+## Versione online
+
+Il frontend statico (Bootstrap Italia, nessun server) viene pubblicato su GitHub Pages dal ramo `main`:
+<https://jobonaf.github.io/uni-pdr-125-kpi/> (vedi `frontend/README.md` per l'attivazione).
+
 ## Test
 
 ```

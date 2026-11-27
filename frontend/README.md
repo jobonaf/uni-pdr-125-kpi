@@ -20,3 +20,13 @@ Calcolatori: disponibili per i 6 KPI quantitativi che li definiscono nel catalog
 Report e confronto tra anni sono disponibili; lo storico è una funzione in più del frontend (Streamlit non lo salva nel file).
 
 Non ancora presenti: grafici interattivi e i calcolatori mancanti nel catalogo.
+
+## Pubblicazione su GitHub Pages
+
+Il workflow `.github/workflows/ci.yml` esegue i test a ogni push e, **solo sul ramo `main`**, pubblica `index.html` e `static/`
+(non `tests/`, `package.json` né il resto del repository). Il sito sarà disponibile su
+`https://jobonaf.github.io/uni-pdr-125-kpi/`.
+
+Attivazione, una sola volta: *Settings → Pages → Build and deployment → Source: **GitHub Actions***.
+Poi basta fare il merge su `main`. Se il deploy non parte, controllare in *Settings → Environments → github-pages* che il ramo `main`
+sia tra quelli ammessi. I percorsi del sito sono tutti relativi, perché Pages lo serve da `/uni-pdr-125-kpi/`.
