@@ -1,0 +1,20 @@
+# Ambiente conda per sviluppo e test locali: conda-forge, senza passare da pip.
+#   conda env create -f environment.yml
+#   conda activate uni-pdr
+#   python -m playwright install chromium      # solo per i test end-to-end
+# requirements.txt resta la fonte per la CI e per chi usa pip; tests/test_environment.py
+# verifica che le due liste non divergano.
+name: uni-pdr
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  # dipendenze dell'app (stesse di requirements.txt)
+  - streamlit>=1.28.0
+  - pandas>=2.0.0
+  - numpy>=1.24.0
+  - plotly>=5.17.0
+  # strumenti di test
+  - pytest
+  - playwright-python
+  - nodejs>=20

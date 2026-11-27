@@ -7,6 +7,12 @@ e il progetto adotta il [Versionamento Semantico](https://semver.org/lang/it/).
 
 ## [Non rilasciato]
 
+### Aggiunto (ambiente conda)
+
+- `environment.yml` (conda-forge): dipendenze dell'app e strumenti di test, alternativa a pip utile dietro proxy. Verificato con micromamba: l'ambiente si risolve e i test (esclusi gli end-to-end) passano con le versioni conda-forge
+- `tests/test_environment.py`: `requirements.txt` ed `environment.yml` devono dichiarare le stesse dipendenze e le stesse versioni minime
+- Nota: su conda-forge `playwright` è il pacchetto Node; i binding Python si chiamano `playwright-python`
+
 ### Aggiunto (test end-to-end e accessibilità, issue #25 e #27)
 
 - `tests/e2e/`: flusso completo, calcolatore, persistenza tra sessioni, stato salvato corrotto, export/import con file validi e non validi, navigazione da tastiera, assenza di scorrimento orizzontale a 360/390/768/1280 px (Chromium, Playwright)
