@@ -2,7 +2,7 @@
 import streamlit as st
 from datetime import datetime
 from src.logic.scoring import calcola_score_globale, kpi_applicabile
-from src.data.kpi_catalog import AREE
+from src.data.kpi_catalog import AREE, SOGLIA_CERTIFICAZIONE
 
 def render_report():
     st.markdown("## 📄 Report PDF")
@@ -38,10 +38,10 @@ def render_report():
         with col1:
             st.markdown(f"### Score Globale Ponderato: **{score:.1f}%**")
         with col2:
-            if score >= 60:
-                st.success("✅ Soglia di certificazione (60%) raggiunta")
+            if score >= SOGLIA_CERTIFICAZIONE:
+                st.success(f"✅ Soglia di certificazione ({SOGLIA_CERTIFICAZIONE}%) raggiunta")
             else:
-                st.warning(f"⚠️ Gap alla certificazione: {60 - score:.1f} punti percentuali")
+                st.warning(f"⚠️ Gap alla certificazione: {SOGLIA_CERTIFICAZIONE - score:.1f} punti percentuali")
         for area in score_data["aree_details"]:
             st.markdown(f"### {area['icona']} {area['nome']} — peso {area['peso']}%")
             st.markdown(f"**Score: {area['score']:.1f}%** | **Contributo: {area['contributo']:.2f}pp**")

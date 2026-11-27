@@ -113,10 +113,58 @@ L'app si aprirà automaticamente nel browser su `http://localhost:8501`.
 
 > **Windows — se `streamlit` non viene trovato nel PATH:**
 > ```bash
-> python -m streamlit run src/app.py
+> python -m streamlit run streamlit_app.py
 > # oppure, se l'eseguibile è in .venv:
 > .venv\Scripts\python.exe -m streamlit run streamlit_app.py
 > ```
+
+### Alternativa con conda (utile se pip non raggiunge i repository, ad esempio dietro proxy)
+
+```bash
+conda env create -f environment.yml
+conda activate uni-pdr
+streamlit run streamlit_app.py
+```
+
+`environment.yml` installa da conda-forge le dipendenze dell'app e gli strumenti di test (pytest, Node.js e i binding Python di
+Playwright) senza passare da pip. Per i test end-to-end serve poi scaricare il browser: `python -m playwright install chromium`
+(dietro proxy impostare prima `HTTPS_PROXY`). `requirements.txt` resta la fonte per la CI e per pip; un test verifica che i due
+file dichiarino le stesse dipendenze.
+
+## Versione online
+
+Il frontend statico (Bootstrap Italia, nessun server) viene pubblicato su GitHub Pages dal ramo `main`:
+<https://jobonaf.github.io/uni-pdr-125-kpi/> (vedi `frontend/README.md` per l'attivazione).
+
+## Test
+
+```
+pip install pytest
+python -m pytest -q tests
+```
+
+I test end-to-end e di accessibilità (`tests/e2e/`, Chromium + axe-core) richiedono Playwright (`pip install playwright`, oppure già incluso in `environment.yml`) e
+`python -m playwright install chromium`; senza, vengono saltati (in CI sono obbligatori).
+
+Per la logica JavaScript del frontend serve Node 20+ (nessun `npm install`):
+
+```
+cd frontend
+node --test
+```
+
+I test sulla logica (`src/data`, `src/logic`) non richiedono Streamlit; quelli di
+interfaccia (`tests/test_ui_calcolatori.py`) vengono saltati se Streamlit non è installato.
+
+## Catalogo JSON per il frontend statico
+
+Dopo ogni modifica a `src/data/kpi_catalog.py` rigenerare il catalogo e committarlo:
+
+```
+python scripts/export_catalog.py
+```
+
+`python scripts/export_catalog.py --check` verifica che sia aggiornato (lo fa anche la suite di test).
 
 ## Utilizzo
 

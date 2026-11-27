@@ -1,11 +1,11 @@
 # src/logic/scoring.py
-from src.data.kpi_catalog import AREE, KPI_DA_RENDICONTARE_PER_FASCIA
+from src.data.kpi_catalog import AREE, KPI_DA_RENDICONTARE_PER_FASCIA, FATTORE_PARZIALE, FASCE_CON_KPI_DA_RENDICONTARE
 
 def kpi_applicabile(kpi, fascia):
     return fascia in kpi["fasceRichieste"]
 
 def is_kpi_da_rendicontare(kpi_id, fascia):
-    if fascia >= 3:
+    if fascia not in FASCE_CON_KPI_DA_RENDICONTARE:
         return False
     return kpi_id in KPI_DA_RENDICONTARE_PER_FASCIA and fascia in KPI_DA_RENDICONTARE_PER_FASCIA[kpi_id]
 
@@ -23,7 +23,7 @@ def calcola_score_area(area, kpi_values, fascia):
             punti_ottenuti += k["punti"]
             completati += 1
         elif val == "Parziale":
-            punti_ottenuti += k["punti"] * 0.5
+            punti_ottenuti += k["punti"] * FATTORE_PARZIALE
             completati += 1
         elif val == "No":
             completati += 1
@@ -76,42 +76,3 @@ def init_kpi_values():
         for kpi in area["kpi"]:
             values[kpi["id"]] = {"valore": "N/V", "note": "", "percentuale": ""}
     return values
-
-def init_calculator_state(kpi_id):
-    """Inizializza lo stato del calcolatore per un KPI (usato in UI)."""
-    # Questa funzione è usata solo nella UI, ma la teniamo qui per coerenza
-    pass
-
-def init_calculator_state(kpi_id):
-    """Inizializza lo stato del calcolatore per un KPI se non esiste."""
-    import streamlit as st
-    if f"calc_{kpi_id}" not in st.session_state:
-        st.session_state[f"calc_{kpi_id}"] = {}
-
-def update_kpi_from_calculator(kpi_id, fascia):
-    """Aggiorna la valutazione e il campo percentuale in base ai valori del calcolatore."""
-    import streamlit as st
-    from src.data.kpi_catalog import CALCOLATORI_KPI
-    calc_data = st.session_state.get(f"calc_{kpi_id}", {})
-    if not calc_data:
-        return
-    config = CALCOLATORI_KPI.get(kpi_id)
-    if not config:
-        return
-    try:
-        inputs = {inp["name"]: calc_data.get(inp["name"]) for inp in config["inputs"]}
-        if any(v is None or v == "" for v in inputs.values()):
-            return
-        valore_calcolato = config["formula"](inputs)
-        valutazione = config["valutazione"](valore_calcolato)
-        # Aggiorna i widget principali
-        st.session_state[f"sel_{kpi_id}"] = valutazione
-        st.session_state[f"perc_{kpi_id}"] = f"{valore_calcolato:.1f}"
-        # Aggiorna kpi_values
-        st.session_state.kpi_values[kpi_id] = {
-            "valore": valutazione,
-            "note": st.session_state.kpi_values.get(kpi_id, {}).get("note", ""),
-            "percentuale": f"{valore_calcolato:.1f}"
-        }
-    except Exception:
-        pass
